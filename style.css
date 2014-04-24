@@ -3,6 +3,11 @@ html {
   font-size: 100%;
 }
 
+img{
+  max-width: 100%;
+  max-height: auto;
+}
+
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -30,18 +35,65 @@ html {
 }
 
 #header{
+  display: block;
+  margin: 0em;
+  padding: 0em;
+}
+
+#main{
+  display: block;
+  margin: 0em;
+  padding: 0em;
+  background: none;
 }
 
 #post{
+  display: block;
+  margin: 0em;
+  padding: 0em;
+  background: #bbb;
 }
 
 #content{
+  display: block;
+  margin: 0em;
+  padding: 0em;
+  background: #ccc;
 }
 
 #sidebar{
+  display: block;
+  margin: 0em;
+  padding: 0em;
+  background: #ddd;
 }
 
 #footer{
+  display: block;
+  margin: 0em;
+  padding: 0em;
+  background: #eee;
+}
+
+.social{
+  display: block;
+  list-style: none;
+  padding: 0em;
+
+}
+ 
+.social li{
+  display: block;
+  padding: 0.2em;
+  float: left;
+  text-align: center;
+  width: 20%;
+}
+
+.logo{
+  display: block;
+  padding: 2em 0;
+  text-align: center;
 }
  
 /* Medium screens (640px) */
@@ -59,6 +111,9 @@ html {
   
   .column.full {
     width: 100%;
+  }
+  .column.three-fourth {
+    width: 74.85%;
   }
   .column.two-thirds {
     width: 66.7%;

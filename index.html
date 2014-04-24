@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
    <head>
        <meta charset="utf-8"/>
        <meta name="viewport" content="width=device-width, initial-scale=1">
 
        <link rel="stylesheet" href="normalize.css">
        <link rel="stylesheet" href="style.css">
+       <link rel="stylesheet" href="menu.css">
+
+       <script type="text/javascript" src="js/menu.js"></script>
 
        <title>TECITECA - Biblioteca de catalogação de tecidos da Bahia</title>
    </head>
@@ -18,21 +22,72 @@
       <div class="container">
 
             <!-- Zona de cabeçalho do site -->
-            <header class="row clearfix" id="header" role="">
+            <header class="row clearfix" id="header" role="heading">
 
               
                     <!-- Área de navegação do site -->
-                    <nav role="navigation">
+                    <nav class="menu" role="navigation">
 
-                          <!-- Elemento de definição da lista -->
+                          <!-- Elemento de definição da lista -->                          
+
+                          <input type="checkbox" id="button">
+                          <label for="button" onclick>Menu</label>
+                          <!-- Elemento de definição da lista -->                          
                           <ul role="menubar">
 
                               <!-- Elementos individuais da lista -->
-                              <li role="menuitem"></li>
+                              <li role="menuitem"><a href="#">Blog</a></li>
+                              <li role="menuitem">
+
+                                  <a href="#">Acervo</a>
+                                  <ul>
+
+                                        <li role="menuitem"><a href="#">Tecidos</a></li>
+                                        <li role="menuitem"><a href="#">Tecnológicos</a></li>
+                                        <li role="menuitem"><a href="#">Não Tecidos</a></li>
+                                        <li role="menuitem"><a href="#">Malhas</a></li>
+
+                                  </ul>
+
+                              </li>
+                              <li role="menuitem"><a href="#">Artigos</a></li>
+                              <li role="menuitem"><a href="#">Equipe</a></li>
+                              <li role="menuitem"><a href="#">Contato</a></li>
+                              <li role="menuitem"><a href="#">Parceiros</a></li>
+                              <li role="menuitem"><a href="#">Login</a></li>
                           
                           </ul>
 
+
                     </nav>
+                    <!-- Área do Logo da TECITECA -->
+                    <section role="banner" class="logo">
+
+                          <img src="imgs/logos/marca_preta-02.png" width="200px" height="auto" style="text-align:center;"><!-- logo da teciteca -->
+                          
+                          <hr>
+                          
+                          <form>
+
+                            <input type="text" placeholder="Pesquisa">
+                            <input type="submit" value="ok">
+
+                          </form>
+                          
+                          <hr>
+                          
+                          <ul class="social"><!-- links para perfis sociais da teciteca -->
+
+                                <li><a href=""><img src="imgs/icons/twitter.svg"></a></li>
+                                <li><a href=""><img src="imgs/icons/facebook.svg"></a></li>
+                                <li><a href=""><img src="imgs/icons/plus.svg"></a></li>
+                                <li><a href=""><img src="imgs/icons/youtube.svg"></a></li>
+                                <li><a href=""><img src="imgs/icons/instagram.svg"></a></li>
+
+                          </ul>
+
+                    </section>
+                    
 
 
             </header>
@@ -42,27 +97,49 @@
 
 
                     <!-- Barra lateral do site -->
-                    <aside class="column third" id="sidebar" role="complementary">
+                    <aside class="column fourth" id="sidebar" role="complementary">
 
-                          <h3></h3>
                           <div>
 
-                              <p></p>
+                              <h3>ipsum</h3>
+                              <div>
+
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et augue leo. Nullam a blandit justo. Nam id varius odio. Cras aliquam justo turpis, non dictum tortor posuere in. Nam faucibus consectetur metus, id aliquam magna. Morbi ac odio suscipit magna molestie pharetra non nec elit. Ut et quam quam. Vestibulum luctus diam mauris, at dictum mauris mattis in. Aliquam mollis consectetur nisl, sed euismod est aliquam lacinia. Sed adipiscing dignissim sollicitudin.</p>
+
+                              </div>
+
+                          </div>
+                          <div>
+
+                              <h3>ipsum</h3>
+                              <div>
+
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et augue leo. Nullam a blandit justo. Nam id varius odio. Cras aliquam justo turpis, non dictum tortor posuere in. Nam faucibus consectetur metus, id aliquam magna. Morbi ac odio suscipit magna molestie pharetra non nec elit. Ut et quam quam. Vestibulum luctus diam mauris, at dictum mauris mattis in. Aliquam mollis consectetur nisl, sed euismod est aliquam lacinia. Sed adipiscing dignissim sollicitudin.</p>
+
+                              </div>
 
                           </div>
 
                     </aside>
 
                     <!-- Área de conteúdo central -->
-                    <section class="column two-thirds" id="content" role="article">
+                    <section class="column three-fourth" id="content" role="article">
 
                           
                           <div class="post">
 
-                              <p></p>
+                              <h1>Lorem ipsum dolor sit amet</h1>
+                              <div>
+
+                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et augue leo. Nullam a blandit justo. Nam id varius odio. Cras aliquam justo turpis, non dictum tortor posuere in. Nam faucibus consectetur metus, id aliquam magna. Morbi ac odio suscipit magna molestie pharetra non nec elit. Ut et quam quam. Vestibulum luctus diam mauris, at dictum mauris mattis in. Aliquam mollis consectetur nisl, sed euismod est aliquam lacinia. Sed adipiscing dignissim sollicitudin.</p>
+                                  <p>Aliquam diam enim, suscipit ut varius et, dapibus in sem. In iaculis eros et eros sodales, sed suscipit arcu blandit. Nullam vulputate viverra mattis. Nam volutpat consequat ligula et gravida. Ut elit lectus, ultricies id venenatis a, tincidunt vitae tellus. Sed varius eu neque a tempus. Nam ac quam eu mi adipiscing pharetra. Phasellus ultricies porta nisl, id convallis eros malesuada eget. Praesent volutpat, urna et pulvinar vulputate, nulla risus tempor sem, id imperdiet augue orci ut odio.</p>
+                                  <p>In laoreet, purus eu porta pellentesque, neque augue elementum justo, vitae lobortis sapien tortor nec nisi. Aenean pulvinar hendrerit nisl, euismod tristique arcu condimentum pulvinar. Suspendisse sed tellus ac urna venenatis euismod a at nisi. Nam sollicitudin quam id nulla pretium porttitor. Curabitur a sollicitudin sapien. Ut euismod scelerisque purus, sit amet luctus justo pretium a. Nullam ut fermentum nulla. Vivamus aliquet massa nec odio dignissim euismod. Phasellus ornare est id nunc porttitor adipiscing. Etiam interdum lectus non elit pharetra placerat. Vestibulum mollis aliquam sapien ac fermentum.</p>
+                                  <p>Nunc vitae felis laoreet, tempor mi in, egestas ipsum. Suspendisse sit amet erat vitae enim euismod feugiat. Aenean nisi arcu, laoreet id pellentesque eu, auctor quis nisl. Integer vitae diam ac risus porttitor lobortis. Donec tincidunt enim eu rhoncus suscipit. Duis vitae vulputate felis. Nam tincidunt porttitor aliquam. Duis eu varius purus. Duis eget mollis velit. Proin viverra, magna sed rutrum bibendum, ante erat laoreet massa, a ullamcorper nunc nunc eget sem. Sed non scelerisque lorem, eu convallis urna. Sed ut ante a lacus cursus fringilla et ut elit.</p>
+                                  <p>Aliquam et vestibulum velit. Curabitur vitae vestibulum velit. Phasellus sit amet ante nec enim pulvinar congue in ut ligula. Ut varius dignissim euismod. Morbi in lectus massa. Maecenas at nunc sed mi facilisis euismod. Pellentesque rhoncus metus vitae erat lobortis, non suscipit nibh scelerisque. Nunc urna diam, bibendum a quam vitae, dapibus adipiscing turpis. Cras mattis felis a lectus suscipit vehicula. Proin mauris massa, posuere eget justo blandit, imperdiet ultricies nisi. Proin pretium lectus neque, at blandit erat varius vitae. Nulla imperdiet, massa ac auctor sodales, orci erat imperdiet sem, et scelerisque urna purus ut tellus. Integer pharetra mi quis nibh venenatis, at convallis quam commodo</p>
+
+                              </div>
 
                           </div>
-
 
                     </section>
 
@@ -72,10 +149,44 @@
             <!-- Zona do rodapé do site -->
             <footer class="row clearfix" id="footer" role="complementary">
               
-                    <div>
+                    <div class="column fourth">
 
-                          <h1></h1>
-                          <p></p>
+                        <h3>ipsum</h3>
+                        <div>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et augue leo. Nullam a blandit justo. Nam id varius odio. Cras aliquam justo turpis, non dictum tortor posuere in. Nam faucibus consectetur metus, id aliquam magna. Morbi ac odio suscipit magna molestie pharetra non nec elit. Ut et quam quam.</p>
+
+                        </div>
+
+                    </div>
+                    <div class="column fourth">
+
+                        <h3>ipsum</h3>
+                        <div>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et augue leo. Nullam a blandit justo. Nam id varius odio. Cras aliquam justo turpis, non dictum tortor posuere in. Nam faucibus consectetur metus, id aliquam magna. Morbi ac odio suscipit magna molestie pharetra non nec elit. Ut et quam quam.</p>
+
+                        </div>
+
+                    </div>
+                    <div class="column fourth">
+
+                        <h3>ipsum</h3>
+                        <div>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et augue leo. Nullam a blandit justo. Nam id varius odio. Cras aliquam justo turpis, non dictum tortor posuere in. Nam faucibus consectetur metus, id aliquam magna. Morbi ac odio suscipit magna molestie pharetra non nec elit. Ut et quam quam.</p>
+
+                        </div>
+
+                    </div>
+                    <div class="column fourth">
+
+                        <h3>ipsum</h3>
+                        <div>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et augue leo. Nullam a blandit justo. Nam id varius odio. Cras aliquam justo turpis, non dictum tortor posuere in. Nam faucibus consectetur metus, id aliquam magna. Morbi ac odio suscipit magna molestie pharetra non nec elit. Ut et quam quam.</p>
+
+                        </div>
 
                     </div>
 

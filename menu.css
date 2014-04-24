@@ -1,0 +1,262 @@
+/* ------------------------ MENU ------------------------- */
+
+.menu > ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  -webkit-animation: bugfix infinite 1s;
+}
+
+@-webkit-keyframes bugfix {
+  from {
+    padding: 0;
+  }
+
+  to {
+    padding: 0;
+  }
+}
+
+.menu {
+  font: inherit;
+}
+.menu * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+}
+.menu li {
+  position: relative;
+}
+.menu li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  margin: 0;
+}
+.menu li:hover > a {
+  color: white;
+}
+.menu input[type=checkbox] {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+.menu label {
+  display: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu > ul {
+  border: 1px solid #040404;
+  background-color: #111111;
+}
+.menu > ul > li {
+  float: left;
+  border-right: 1px solid #1e1e1e;
+}
+.menu > ul > li > a {
+  float: left;
+  padding: 0.5em 1em;
+  font-size: 1em;
+}
+.menu > ul a {
+  color: #999999;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #111111;
+}
+.menu > ul ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  margin: 2em 0 0 0;
+  background-color: #373737;
+  background-image: none;
+  -webkit-transition-property: margin, opacity;
+  -moz-transition-property: margin, opacity;
+  -o-transition-property: margin, opacity;
+  transition-property: margin, opacity;
+  -webkit-transition-duration: .15s;
+  -moz-transition-duration: .15s;
+  -o-transition-duration: .15s;
+  transition-duration: .15s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.menu > ul ul li {
+  display: block;
+  -webkit-box-shadow: 0 1px 0 #1e1e1e, 0 2px 0 #515151;
+  -moz-box-shadow: 0 1px 0 #1e1e1e, 0 2px 0 #515151;
+  box-shadow: 0 1px 0 #1e1e1e, 0 2px 0 #515151;
+}
+.menu > ul ul li:first-child > a {
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  -ms-border-radius: 3px 3px 0 0;
+  -o-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+.menu > ul ul li:first-child > a:after {
+  content: '';
+  position: absolute;
+  left: 1em;
+  top: -12px;
+  border: 6px solid transparent;
+  border-bottom-color: inherit;
+}
+.menu > ul ul li:last-child {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.menu > ul ul li:last-child > a {
+  -webkit-border-radius: 0 0 3px 3px;
+  -moz-border-radius: 0 0 3px 3px;
+  -ms-border-radius: 0 0 3px 3px;
+  -o-border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
+}
+.menu > ul ul a {
+  padding: 0.5em 1em;
+  width: auto;
+  display: block;
+  border-color: #333;
+}
+.menu > ul ul a:hover {
+  background-color: #c51f62;
+  border-color: #c51f62;
+}
+
+@media screen and (max-width: 480px) {
+  .menu > ul, .menu > ul ul {
+    visibility: visible;
+    opacity: 1;
+    display: none;
+  }
+
+  .menu input[type=checkbox]:checked ~ label,
+  .menu input[type=checkbox] ~ label:hover {
+    color: white;
+  }
+  .menu label {
+    border: 1px solid #040404;
+    background-color: #111111;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    color: #999999;
+    text-shadow: 0 1px 0 #111111;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+    padding: 1em 3em;
+  }
+  .menu label:before {
+    position: absolute;
+    left: 0.5em;
+    top: 0.2em;
+    content: "\2261";
+    font-size: 2em;
+  }
+  .menu > ul {
+    position: relative;
+    border-color: #111111;
+    margin: 0.5em 0 !important;
+    padding: 0.25em;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: #111111;
+    background-image: none;
+  }
+  .menu > ul:after {
+    content: '';
+    position: absolute;
+    left: 2em;
+    top: -12px;
+    border: 6px solid transparent;
+    border-bottom-color: inherit;
+  }
+  .menu > ul li {
+    display: block;
+  }
+  .menu > ul > li {
+    float: none;
+    border: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: #111111;
+    background-image: none;
+  }
+  .menu > ul > li > a {
+    float: none;
+    display: block;
+    padding: 0.5em;
+  }
+  .menu > ul ul {
+    position: static;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    background-color: #2b2b2b;
+    background-image: none;
+    margin: 0;
+    -webkit-transition-property: none;
+    -moz-transition-property: none;
+    -o-transition-property: none;
+    transition-property: none;
+  }
+  .menu > ul ul li:first-child > a {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+  }
+  .menu > ul ul li:first-child > a:after {
+    content: none;
+  }
+  .menu > ul ul li:last-child > a {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+  }
+  .menu > ul ul a {
+    padding-left: 2em;
+    display: block;
+    width: auto;
+  }
+  .menu input[type=checkbox]:checked ~ ul {
+    display: block;
+  }
+  .menu input[type=checkbox]:checked ~ ul ul {
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu > ul > li > a {
+    padding: 1em 2em;
+  }
+}
