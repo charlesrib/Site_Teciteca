@@ -17,7 +17,7 @@ img{
 .container {
   margin: 0 auto;
   max-width: 60rem;
-  width: 90%;
+  width: 100%;
 }
 
 .clearfix:before,
@@ -34,45 +34,11 @@ img{
   *zoom: 1;
 }
 
+/* Formatação dos itens do header */
 #header{
   display: block;
   margin: 0em;
   padding: 0em;
-}
-
-#main{
-  display: block;
-  margin: 0em;
-  padding: 0em;
-  background: none;
-}
-
-#post{
-  display: block;
-  margin: 0em;
-  padding: 0em;
-  background: #bbb;
-}
-
-#content{
-  display: block;
-  margin: 0em;
-  padding: 0em;
-  background: #ccc;
-}
-
-#sidebar{
-  display: block;
-  margin: 0em;
-  padding: 0em;
-  background: #ddd;
-}
-
-#footer{
-  display: block;
-  margin: 0em;
-  padding: 0em;
-  background: #eee;
 }
 
 .social{
@@ -96,6 +62,61 @@ img{
   text-align: center;
 }
  
+/* Formatação dos itens da Sidebar */
+#sidebar{
+  display: block;
+  margin: 0em;
+  padding: 0em;
+  background: #ddd;
+}
+
+#sidebar .G_widget{
+  padding: 0em;
+  margin: 0em;
+  margin-bottom: 0em;
+  max-width: 100%;
+}
+
+#sidebar .G_widget .T_widget{
+  background: #ccc;
+}
+
+#sidebar .G_widget .Cont_widget{
+  display: none;
+}
+
+/* Formatação dos itens do Main */
+#main{
+  display: block;
+  margin: 0em;
+  padding: 0em;
+  background: none;
+}
+
+/* Formatação dos itens do Post */
+#post{
+  display: block;
+  margin: 0em;
+  padding: 0em;
+  background: #bbb;
+}
+
+/* Formatação dos itens do Content */
+#content{
+  display: block;
+  margin: 0em;
+  padding: 0em;
+  background: #ccc;
+}
+
+/* Formatação dos itens do Footer */
+#footer{
+  display: block;
+  margin: 0em;
+  padding: 0em;
+  background: #eee;
+}
+
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
 

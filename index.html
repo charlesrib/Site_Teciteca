@@ -9,7 +9,10 @@
        <link rel="stylesheet" href="style.css">
        <link rel="stylesheet" href="menu.css">
 
-       <script type="text/javascript" src="js/menu.js"></script>
+       <link rel="shortcut icon" href="icon.png" >
+
+       <script type="text/javascript" src="js/teciteca.js"></script>
+       <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 
        <title>TECITECA - Biblioteca de catalogação de tecidos da Bahia</title>
    </head>
@@ -63,7 +66,7 @@
                     <!-- Área do Logo da TECITECA -->
                     <section role="banner" class="logo">
 
-                          <img src="imgs/logos/marca_preta-02.png" width="200px" height="auto" style="text-align:center;"><!-- logo da teciteca -->
+                          <a href="#"><img src="imgs/logos/marca_preta-02.png" width="200px" height="auto"></a><!-- logo da teciteca -->
                           
                           <hr>
                           
@@ -99,24 +102,36 @@
                     <!-- Barra lateral do site -->
                     <aside class="column fourth" id="sidebar" role="complementary">
 
-                          <div>
+                          <div class="G_widget">
 
-                              <h3>ipsum</h3>
-                              <div>
+                              <h3 class="T_widget">ipsum</h3>
+                              <div class="Cont_widget">
 
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et augue leo. Nullam a blandit justo. Nam id varius odio. Cras aliquam justo turpis, non dictum tortor posuere in. Nam faucibus consectetur metus, id aliquam magna. Morbi ac odio suscipit magna molestie pharetra non nec elit. Ut et quam quam. Vestibulum luctus diam mauris, at dictum mauris mattis in. Aliquam mollis consectetur nisl, sed euismod est aliquam lacinia. Sed adipiscing dignissim sollicitudin.</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et augue leo. Nullam a blandit justo. Nam id varius odio. Cras aliquam justo turpis, non dictum tortor posuere in. Nam faucibus consectetur metus, id aliquam magna. Morbi ac odio suscipit magna molestie pharetra non nec elit. Ut et quam quam. Vestibulum luctus diam mauris, at dictum mauris mattis in. Aliquam mollis consectetur nisl, sed euismod est aliquam lacinia. Sed adipiscing dignissim sollicitudin.</p>
 
                               </div>
 
                           </div>
-                          <div>
 
-                              <h3>ipsum</h3>
-                              <div>
+                          <div class="G_widget">
 
-                                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et augue leo. Nullam a blandit justo. Nam id varius odio. Cras aliquam justo turpis, non dictum tortor posuere in. Nam faucibus consectetur metus, id aliquam magna. Morbi ac odio suscipit magna molestie pharetra non nec elit. Ut et quam quam. Vestibulum luctus diam mauris, at dictum mauris mattis in. Aliquam mollis consectetur nisl, sed euismod est aliquam lacinia. Sed adipiscing dignissim sollicitudin.</p>
+                              <h3 class="T_widget">ipsum</h3>
+                              <div class="Cont_widget">
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et augue leo. Nullam a blandit justo. Nam id varius odio. Cras aliquam justo turpis, non dictum tortor posuere in. Nam faucibus consectetur metus, id aliquam magna. Morbi ac odio suscipit magna molestie pharetra non nec elit. Ut et quam quam. Vestibulum luctus diam mauris, at dictum mauris mattis in. Aliquam mollis consectetur nisl, sed euismod est aliquam lacinia. Sed adipiscing dignissim sollicitudin.</p>
 
                               </div>
+
+                          </div>
+
+                          <div class="G_widget">
+
+                              <h3 class="T_widget">ipsum</h3>
+                              <div class="Cont_widget">
+
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et augue leo. Nullam a blandit justo. Nam id varius odio. Cras aliquam justo turpis, non dictum tortor posuere in. Nam faucibus consectetur metus, id aliquam magna. Morbi ac odio suscipit magna molestie pharetra non nec elit. Ut et quam quam. Vestibulum luctus diam mauris, at dictum mauris mattis in. Aliquam mollis consectetur nisl, sed euismod est aliquam lacinia. Sed adipiscing dignissim sollicitudin.</p>
+
+                                </div>
 
                           </div>
 
@@ -195,7 +210,24 @@
       </div>
 
 
+    <script type="text/javascript">
 
+      var corAtiva = "rgb(112, 156, 190)";
+      var corInativa = "rgb(255, 255, 255)";
+      $(function(){
+          $(".T_widget").hover(
+              function(){$(this).css("background", corAtiva);},
+              function(){$(this).css("background", corInativa)}
+          );
+       
+          $(".T_widget").click(function(){
+              $(".Cont_widget").slideUp();
+              var cont = $(this).next();
+              $(cont).slideDown("fast");     
+          });
+      });
+
+    </script>
    </body>
 
 
