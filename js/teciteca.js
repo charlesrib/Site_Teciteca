@@ -1,14 +1,11 @@
-var corAtiva = "rgb(112, 156, 190)";
-var corInativa = "rgb(255, 255, 255)";
-$(function(){
-    $(".T_widget").hover(
-        function(){$(this).css("background", corAtiva);},
-        function(){$(this).css("background", corInativa)}
-    );
- 
-    $(".T_widget").click(function(){
-        $(".Cont_widget").slideUp();
-        var cont = $(this).next();
-        $(cont).slideDown("fast");     
-    });
-});
+(function($) {
+    
+  var allPanels = $('.accordion > dd').hide();
+    
+  $('.accordion > dt > a').click(function() {
+    allPanels.slideUp();
+    $(this).parent().next().slideDown();
+    return false;
+  });
+
+})(jQuery);
