@@ -67,13 +67,15 @@ img{
   display: block;
   margin: 0em;
   padding: 0em;
-  background: #ccc;
 }
 
 
 /* inicio do sidebar Accordion */
 .accordion {
-   margin: 0px;   
+  margin: 0px;   
+  background: #e5e5e5;
+  border: none;
+  border-left: solid 1px #c51f62;
 }
 
 .accordion h3{
@@ -88,7 +90,7 @@ img{
   display: block;
   cursor: pointer;
   padding: 0.5em;
-  background: #000;
+  background: #59baad;
 
   font-size: 0.9em;
   color: #fff;
@@ -96,7 +98,7 @@ img{
 }
 
 .accordion div{
-  background: #e5e5e5;
+  border: none;
 }
 
 .accordion div p{
@@ -115,20 +117,33 @@ img{
   background: none;
 }
 
-/* Formatação dos itens do Post */
-#post{
-  display: block;
-  margin: 0em;
-  padding: 0em;
-  background: #bbb;
-}
-
 /* Formatação dos itens do Content */
 #content{
   display: block;
   margin: 0em;
   padding: 0em;
-  background: #ccc;
+  background: #f2f2f2;
+}
+
+/* Formatação dos itens do Post */
+.post{
+  display: block;
+  margin: 0em;
+  padding: 0em;
+}
+
+.post h1{
+  display: block;
+  padding: 0.3em 0em;
+  margin: 0em;
+  color: #c51f62;
+}
+
+.post h2{
+  display: block;
+  padding: 0.3em 0em;
+  margin: 0em;
+  color: #666;
 }
 
 /* Formatação dos itens do Footer */
