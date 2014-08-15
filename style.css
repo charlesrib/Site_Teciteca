@@ -1,3 +1,6 @@
+@charset "UTF-8";
+@import url("css/normalize.css");
+
 /* Small screens (default) */
 html {
   font-size: 100%;
@@ -6,6 +9,13 @@ html {
 img{
   max-width: 100%;
   max-height: auto;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6{
 }
 
 *, *:before, *:after {
@@ -34,79 +44,300 @@ img{
   *zoom: 1;
 }
 
+.row{
+  position: relative;
+  min-width: 100%;
+  margin: 0em;
+  padding: 0em;
+}
+
+.bg01{
+  background: #c06;
+  border-bottom: solid 2px #a24;
+  z-index: 3;
+  
+  /*shadow*/
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.50);
+  -moz-box-shadow:    0px 2px 4px 0px rgba(50, 50, 50, 0.50);
+  box-shadow:         0px 2px 4px 0px rgba(50, 50, 50, 0.50);
+}
+
+.bg02{
+  background: #f5f5f5;
+  border-bottom: solid 1px #fff;
+  
+  /*shadow*/
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.50);
+  -moz-box-shadow:    0px 2px 4px 0px rgba(50, 50, 50, 0.50);
+  box-shadow:         0px 2px 4px 0px rgba(50, 50, 50, 0.50);
+  z-index: 2;
+}
+
+.bg03{
+  background: #58baad;
+  border-bottom: solid 1px #fff;
+  
+  /*shadow*/
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.50);
+  -moz-box-shadow:    0px 2px 4px 0px rgba(50, 50, 50, 0.50);
+  box-shadow:         0px 2px 4px 0px rgba(50, 50, 50, 0.50);
+  z-index: 1;
+}
+
+.bg04{
+  /*shadow*/
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.50);
+  -moz-box-shadow:    0px 2px 4px 0px rgba(50, 50, 50, 0.50);
+  box-shadow:         0px 2px 4px 0px rgba(50, 50, 50, 0.50);
+  
+  /*gradient*/
+  background: #e5e5e5; /* Old browsers */
+  background: -moz-linear-gradient(top,  #f2f2f2 0%, #e5e5e5 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #f2f2f2 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #f2f2f2 0%,#e5e5e5 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #f2f2f2 0%,#e5e5e5 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #f2f2f2 0%,#e5e5e5 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+  z-index: 100
+}
+
+.blank{
+  margin: 1.5em auto;
+}
+
+.center{
+  text-align: center;
+}
+
+.left{
+  text-align: left !important;
+}
+
+.right{
+  text-align: right !important;
+}
+
+.social{
+  position: fixed;
+  list-style: none;
+  margin: 1em;
+  padding: 0em;
+  bottom: 0em;
+  z-index: 101;
+}
+    .social li{
+      display: block;
+    }
+
+
 /* Formatação dos itens do header */
+.menuGlobal{
+  position: relative;
+  display: block;
+  margin: 0em auto;
+  padding: 0.2em 0em;
+  width: 100%;
+  max-width: 60rem;
+  background: none;
+  border-bottom: #a24;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+    .menuGlobal ul{
+      position: relative;
+      list-style: none;
+      display: inline-block;
+      padding: 0em;
+      margin: 0 auto;
+      background: none;
+    }
+       .menuGlobal ul li{
+          display: inline-block;
+        }
+           .menuGlobal ul li a{
+              display: block;
+              margin: 0em;
+              padding: 0.2em 1em;
+              text-decoration: none;
+              color: #666;
+            }
+               .menuGlobal ul li a:hover{
+                  color: #fff;
+                  background: #58baad;
+                }
+        /* ################################################# alterar isso aqui ################################################# */
+        .menuGlobal ul ul{
+          display: none;
+          position: absolute;
+          list-style: none;
+          margin: 0.2em 0em 0em 0em;
+          padding: 0em;
+          background: #c06;
+        }
+        /* ################################################# alterar isso aqui ################################################# */
+          .menuGlobal ul ul li{
+              display: block;
+            }
+
+
+.menubar{
+  position: relative;
+  display: block;
+  margin: 0em auto;
+  width: 100%;
+  background: none;
+  border-bottom: #a24;
+}
+    .menuTitle{
+      padding: 1em 0em;
+    }
+        .menuTitle h1{
+          font-size: 1em;
+          color: #fff;
+        }
+            .menuTitle h1 a img{
+              display: inline-block;
+              margin-top: 0.1em;
+            }
+            .menuTitle h1 a{
+              display: inline-block;
+              padding: 0.25em 0.5em;
+              border-bottom: solid 2px #a24;
+              background: #b15;
+              color: #fff;
+            }
+                .menuTitle h1 a:hover{
+                  border-bottom: solid 2px #b15;
+                  background: #a24;
+                  color: #fff;
+                }
+
+
+    .menubar ul{
+      position: absolute;
+      list-style: none;
+      top: 3em;
+      margin: 0 auto;
+      width: 100%;
+      padding: 0em;
+      background: #c06;
+
+      /*shadow*/
+      -webkit-box-shadow: 0px 5px 15px 0px rgba(50, 50, 50, 0.75);
+      -moz-box-shadow:    0px 5px 15px 0px rgba(50, 50, 50, 0.75);
+      box-shadow:         0px 5px 15px 0px rgba(50, 50, 50, 0.75);
+      z-index: 100;
+    }
+       .menubar ul li{
+          display: block;
+        }
+           .menubar ul li a{
+              display: block;
+              margin: 0em;
+              border-bottom: solid 1px #a24;
+              padding: 0.2em 0.5em;
+              text-decoration: none;
+              color: #fff;
+            }
+               .menubar ul li a:hover{
+                  color: #fff;
+                  background: #b15;
+                }
+        /* ################################################# alterar isso aqui ################################################# */
+        .menubar ul ul{
+          position: relative;
+          list-style: none;
+          top: 0em;
+          display: block;
+          margin: 0em;
+          padding: 0em;
+          /*shadow*/
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          background: #58baad;
+        }
+        /* ################################################# alterar isso aqui ################################################# */
+            .menubar ul ul li{
+              display: block;
+            }
+                .menubar ul ul li a{
+                  font-size: 0.9em;
+                  border-bottom: solid 1px #449999;
+                  padding: 0 0 0 1em;
+                  display: block;
+                }
+
 #header{
   display: block;
   margin: 0em;
   padding: 0em;
 }
+    #header .logoBar{
+      margin: 0.5em 0em;
+      text-align: left;
+    }
+    #header .logotitle{
+      margin: 1em 0em;
+    }
+        #header .logotitle a{
+          color: #fff;
+        }
+            #header .logotitle a:hover{
+              color: #fff;
+            }
+    #header .logoSearch{
+      margin: 1.5em 0em;
+    }
 
-.social{
-  display: block;
-  list-style: none;
-  padding: 0em;
-
+/* Formatação dos itens das Tabs */
+#tabs{
+  width:100%;
+  display:inline-block;
 }
+    #tabs .tabTitle{
+      display:block;
+      clear:both;
+      content:'';
+      background: none;
+    }
+        #tabs .tabTitle li{
+          margin:0px 5px;
+          float:left;
+          list-style:none;
+        }
+            #tabs .tabTitle a{
+              padding:0.5em 1em;
+              display:inline-block;
+              background:#58baad;
+              font-size:0.8em;
+              font-weight:bold;
+              color:#fff;
+              transition:all linear 0.15s;
+            }
+                #tabs .tabTitle a:hover{
+                  background:#c06;
+                  text-decoration:none;
+                }
+        #tabs .tabTitle li.active a, #tabs .tabTitle li.active a:hover {
+          background:#fff;
+          color:#4c4c4c;
+        }
+
+    #tabs .tabContent{
+      padding:15px;
+      background:#ccc;
+    }
  
-.social li{
-  display: block;
-  padding: 0.2em;
-  float: left;
-  text-align: center;
-  width: 20%;
-}
-
-.logo{
-  display: block;
-  padding: 2em 0;
-  text-align: center;
-}
+        .tab {
+            display:none;
+        }
  
-/* Formatação dos itens da Sidebar */
-#sidebar{
-  display: block;
-  margin: 0em;
-  padding: 0em;
-}
+        .tab.active {
+            display:block;
+        }    
 
-
-/* inicio do sidebar Accordion */
-.accordion {
-  margin: 0px;   
-  background: #e5e5e5;
-  border: none;
-  border-left: solid 1px #c51f62;
-}
-
-.accordion h3{
-  cursor: pointer;
-  display: block;
-  margin: 0em;
-}
-
-.accordion h3 a{
-  width: 100%;
-  max-width: 100%;
-  display: block;
-  cursor: pointer;
-  padding: 0.5em;
-  background: #59baad;
-
-  font-size: 0.9em;
-  color: #fff;
-  text-decoration: none;
-}
-
-.accordion div{
-  border: none;
-}
-
-.accordion div p{
-  padding: 0em 0.5em;
-  font-size: 0.8em;
-}
-
-/* fim do sidebar Accordion */
 
 
 /* Formatação dos itens do Main */
@@ -122,43 +353,44 @@ img{
   display: block;
   margin: 0em;
   padding: 0em;
-  background: #f2f2f2;
+  border-top: solid 1px #ccc;
 }
+    /* Formatação dos itens do Post */
+    .post{
+      position: relative;
+      display: block;
+      margin: 1em 0em;
+      padding: 0em 1em;
+    }
+        .post h1{
+        }
 
-/* Formatação dos itens do Post */
-.post{
+/* Formatação dos itens da Sidebar */
+#sidebar{
   display: block;
   margin: 0em;
   padding: 0em;
+  border-top: solid 1px #ccc;
 }
-
-.post h1{
-  display: block;
-  padding: 0.3em 0em;
-  margin: 0em;
-  color: #c51f62;
-}
-
-.post h2{
-  display: block;
-  padding: 0.3em 0em;
-  margin: 0em;
-  color: #666;
-}
+    #sidebar section{
+      display: block;
+      margin: 0.5em 0em;
+      padding: 0em 1em;
+      border-bottom: solid 1px #ccc;
+    }
 
 /* Formatação dos itens do Footer */
 #footer{
   display: block;
   margin: 0em;
   padding: 0em;
-  background: #eee;
 }
 
 /* Medium screens (640px) */
 @media (min-width: 40rem) {
 
   html {
-    font-size: 112%;
+    font-size: 110%;
   }
 
   .column {
@@ -167,35 +399,71 @@ img{
     padding-right: 1rem;
   }
   
-  .column.full {
-    width: 100%;
-  }
-  .column.three-fourth {
-    width: 74.85%;
-  }
-  .column.two-thirds {
-    width: 66.7%;
-  }
-  .column.half {
-    width: 50%;
-  }
-  .column.third {
-    width: 33.3%;
-  }
-  .column.fourth {
-    width: 24.95%;
-  }
+  .column.one, .column.two {width: 33.33%;  }
+  .column.three, .column.four {    width: 33.33%;  }
+  .column.five, .column.six {width: 66.66%;  }
+  .column.seven, .column.eight {width: 66.66%;  }
+  .column.nine, .column.ten {width: 100%;  }
+  .column.eleven, .column.twelve {width: 100%;  }
   .column.flow-opposite {
     float: right;
   }
 
 }
  
-/* Large screens (1024px) */
-@media (min-width: 64rem) { 
+/* Large screens (980PX) */
+@media (min-width: 50rem) {
+
+  .column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .column.one, .column.two, .column.three {
+    width: 25%;
+  }
+  .column.four, .column.five, .column.six {
+    width: 50%;
+  }
+  .column.seven, .column.eight, .column.nine {
+    width: 75%;
+  }
+  .column.ten, .column.eleven, .column.twelve {
+    width: 100%;
+  }
+  .column.flow-opposite {
+    float: right;
+  }
+
+}
+
+/* Large screens (1120px) */
+@media (min-width: 70rem) { 
 
   html {
     font-size: 120%;
   }
+
+
+  .column {
+    float: left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .column.one {width: 8.33%;  }
+  .column.two {width: 16.66%;  }
+  .column.three {width: 25%;  }
+  .column.four {width: 33.33%;  }
+  .column.five {width: 41.66%;  }
+  .column.six {width: 50%;  }
+  .column.seven {width: 58.33%;  }
+  .column.eight {width: 66.66%;  }
+  .column.nine {width: 75%;  }
+  .column.ten {width: 83.33%;  }
+  .column.eleven {width: 91.66%;  }
+  .column.twelve {width: 100%;  }
+  .column.flow-opposite {float: right;  }
 
 }

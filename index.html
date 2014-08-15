@@ -5,9 +5,7 @@
        <meta charset="utf-8"/>
        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-       <link rel="stylesheet" href="normalize.css">
        <link rel="stylesheet" href="style.css">
-       <link rel="stylesheet" href="menu.css">
 
        <link rel="shortcut icon" href="icon.png" >
 
@@ -21,24 +19,65 @@
    <body>
 
 
-      <!-- Elemento centralizador da página -->
+    <div class="row bg04">
+
+      <nav class="menuGlobal" role="navigation">
+
+            <ul role="menubar">
+
+                <!-- Elementos individuais da lista -->
+                <li role="menuitem"><a href="#">UFBA</a></li>
+                <li role="menuitem"><a href="#">Belas Artes</a></li>
+                <li role="menuitem"><a href="#">Lab Griot</a></li>
+                <li role="menuitem"><a href="#">Teciteca</a></li>
+            
+            </ul>
+
+      </nav>
+
+    </div>
+
+
+    <ul class="social"><!-- links para perfis sociais da teciteca -->
+
+          <li class="center"><a href="#"><img src="imgs/icons/twitter.png"></a></li>
+          <li class="center"><a href="#"><img src="imgs/icons/facebook.png"></a></li>
+          <li class="center"><a href="#"><img src="imgs/icons/plus.png"></a></li>
+          <li class="center"><a href="#"><img src="imgs/icons/youtube.png"></a></li>
+          <li class="center"><a href="#"><img src="imgs/icons/instagram.png"></a></li>
+
+    </ul>
+
+
+
+      <!-- Elemento centralizador em linha -->
+      <div class="row bg01">
+      <!-- Área de navegação do site -->
       <div class="container">
 
             <!-- Zona de cabeçalho do site -->
             <header class="row clearfix" id="header" role="heading">
 
               
-                    <!-- Área de navegação do site -->
-                    <nav class="menu" role="navigation">
+                    <!-- Área do Logo da TECITECA -->
+                    <section class="column two" role="banner">
 
-                          <!-- Elemento de definição da lista -->                          
+                          <div class="logoBar">
 
-                          <input type="checkbox" id="button">
-                          <label for="button" onclick>Menu</label>
-                          <!-- Elemento de definição da lista -->                          
-                          <ul role="menubar">
+                            <a href="#"><img src="imgs/logos/logo_teciteca.png"></a><!-- logo da teciteca -->
+
+                          </div>
+                          
+                    </section>
+                    
+                    <!-- Área navegação -->
+                    <nav class="column two menubar" role="navigation">
+
+                          <div class="menuTitle"><h1><a href="#"><img src="imgs/icons/menu.png"><span> Menu</span></a></h1></div>
+                           <ul id="menu" class="logoBar" role="menubar">
 
                               <!-- Elementos individuais da lista -->
+                              <li role="menuitem"><a href="#">Home</a></li>
                               <li role="menuitem"><a href="#">Blog</a></li>
                               <li role="menuitem">
 
@@ -61,68 +100,57 @@
                           
                           </ul>
 
-
                     </nav>
-                    <!-- Área do Logo da TECITECA -->
-                    <section role="banner" class="logo">
 
-                          <a href="#"><img src="imgs/logos/marca_rosa-03.png" width="200px"></a><!-- logo da teciteca -->
-                          
-                          <hr>
-                          
-                          <form>
+                    <!-- Área nome da página -->
+                    <section class="column four center" role="banner">
 
-                            <input type="text" placeholder="Pesquisa">
-                            <input type="submit" value="ok">
+                          <div class="logotitle center">
+
+                            <a href="#"><h1>Teciteca</h1></a><!-- titulo da página -->
+
+                          </div>
+                          
+                    </section>
+                    
+                    <!-- Área da pesquisa -->
+                    <section class="column four" role="search">
+
+                          <form class="logoSearch right">
+
+                              <input type="search" placeholder=" Pesquisa"><input type="submit" value="ok">
 
                           </form>
                           
-                          <hr>
-                          
-                          <ul class="social"><!-- links para perfis sociais da teciteca -->
-
-                                <li><a href=""><img src="imgs/icons/twitter.svg"></a></li>
-                                <li><a href=""><img src="imgs/icons/facebook.svg"></a></li>
-                                <li><a href=""><img src="imgs/icons/plus.svg"></a></li>
-                                <li><a href=""><img src="imgs/icons/youtube.svg"></a></li>
-                                <li><a href=""><img src="imgs/icons/instagram.svg"></a></li>
-
-                          </ul>
-
                     </section>
                     
-
-
             </header>
+
+      </div>
+      </div>
+
+      <div class="row bg02">
+
+      <div class="container">
+
+
+      <!-- Zona do rodapé do site -->
+      <section class="row clearfix" id="tabs" role="article">
+        
+              <!-- zona para colocar widget do intagram -->
+              <div class="column twelve blank center">Espaço dedicado ao instagram da Teciteca!</div>
+
+      </section>
+
+      <div class="container">
 
             <!-- Zona do corpo de conteúdo do site -->
             <section class="row clearfix" id="main" role="main">
 
 
-                    <!-- Barra lateral do site -->
-                    <aside class="column fourth accordion" id="sidebar" role="complementary">
-
-                          <dl class="accordion">
-
-                                  <h3><a href="">widget 01</a></h3>
-                                  <div><p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p></div>
-
-                                  <h3><a href="">widget 02</a></h3>
-                                  <div><p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p></div>
-
-                                  <h3><a href="">widget 03</a></h3>
-                                  <div><p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p></div>
-
-                                  <h3><a href="">X</a></h3>
-
-                          </dl>
-
-                    </aside>
-
                     <!-- Área de conteúdo central -->
-                    <section class="column three-fourth" id="content" role="article">
+                    <section class="column nine" id="content" role="article">
 
-                          
                           <div class="post">
 
                               <h1>Titulo de um artigo</h1>
@@ -130,10 +158,13 @@
                               <h3>01 de Janeiro de 2016</h3>
                               <div>
 
-                                  <div></div>
-                                  <div>código do tecido</div>
+                                  <div>
 
-                                  <img src="#" width="500px" height="150px">
+                                      <div>código do tecido</div>
+                                      <img src="#" width="500px" height="150px">
+
+                                  </div>
+
                                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et augue leo. Nullam a blandit justo. Nam id varius odio. Cras aliquam justo turpis, non dictum tortor posuere in. Nam faucibus consectetur metus, id aliquam magna. Morbi ac odio suscipit magna molestie pharetra non nec elit. Ut et quam quam. Vestibulum luctus diam mauris, at dictum mauris mattis in. Aliquam mollis consectetur nisl, sed euismod est aliquam lacinia. Sed adipiscing dignissim sollicitudin.</p>
                                   <p>Aliquam diam enim, suscipit ut varius et, dapibus in sem. In iaculis eros et eros sodales, sed suscipit arcu blandit. Nullam vulputate viverra mattis. Nam volutpat consequat ligula et gravida. Ut elit lectus, ultricies id venenatis a, tincidunt vitae tellus. Sed varius eu neque a tempus. Nam ac quam eu mi adipiscing pharetra. Phasellus ultricies porta nisl, id convallis eros malesuada eget. Praesent volutpat, urna et pulvinar vulputate, nulla risus tempor sem, id imperdiet augue orci ut odio.</p>
                                   <p>In laoreet, purus eu porta pellentesque, neque augue elementum justo, vitae lobortis sapien tortor nec nisi. Aenean pulvinar hendrerit nisl, euismod tristique arcu condimentum pulvinar. Suspendisse sed tellus ac urna venenatis euismod a at nisi. Nam sollicitudin quam id nulla pretium porttitor. Curabitur a sollicitudin sapien. Ut euismod scelerisque purus, sit amet luctus justo pretium a. Nullam ut fermentum nulla. Vivamus aliquet massa nec odio dignissim euismod. Phasellus ornare est id nunc porttitor adipiscing. Etiam interdum lectus non elit pharetra placerat. Vestibulum mollis aliquam sapien ac fermentum.</p>
@@ -147,12 +178,48 @@
                     </section>
 
 
+                    <!-- Barra lateral do site -->
+                    <aside class="column three" id="sidebar" role="complementary">
+
+                          <section>
+
+                                  <h3><a href="">widget 01</a></h3>
+                                  <div><p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p></div>
+                                  
+                          </section>
+
+                          <section>
+
+                                  <h3><a href="">widget 01</a></h3>
+                                  <div><p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p></div>
+                                  
+                          </section>
+
+                          <section>
+
+                                  <h3><a href="">widget 01</a></h3>
+                                  <div><p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p></div>
+                                  
+                          </section>
+
+                    </aside>
+
+
+
             </section>
+
+
+      </div>
+      </div>
+
+      <div class="row bg03">
+      <div class="container">
+
 
             <!-- Zona do rodapé do site -->
             <footer class="row clearfix" id="footer" role="complementary">
               
-                    <div class="column fourth">
+                    <div class="column three">
 
                         <h3>ipsum</h3>
                         <div>
@@ -162,7 +229,7 @@
                         </div>
 
                     </div>
-                    <div class="column fourth">
+                    <div class="column three">
 
                         <h3>ipsum</h3>
                         <div>
@@ -172,7 +239,7 @@
                         </div>
 
                     </div>
-                    <div class="column fourth">
+                    <div class="column three">
 
                         <h3>ipsum</h3>
                         <div>
@@ -182,7 +249,7 @@
                         </div>
 
                     </div>
-                    <div class="column fourth">
+                    <div class="column three">
 
                         <h3>ipsum</h3>
                         <div>
@@ -195,26 +262,20 @@
 
             </footer>
 
+
       </div>
-
-      <script type="text/javascript">
-
-      (function($) {
-    
-        var allPanels = $('.accordion > div').hide();
-          
-        $('.accordion > h3 > a').click(function() {
-          allPanels.slideUp();
-          $(this).parent().next().slideDown();
-          return false;
-        });
-
-      })(jQuery);
-
-      </script>
+      </div>
 
    </body>
 
+   <script>
 
+      $('#menu').hide(); //Hide children by default
+
+          $('.menuTitle').click(function(){
+              $('#menu').slideToggle('fast');
+      });
+
+  </script>
 
 </html>
