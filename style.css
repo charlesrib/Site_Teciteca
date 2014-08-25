@@ -168,6 +168,14 @@ h3, h6{
   box-shadow:         inset 0px -5px 10px 0px rgba(50, 50, 50, 0.75);
 }
 
+.bg06{
+  background: url("imgs/Scan2.jpg");
+  min-height: 350px;
+  -webkit-box-shadow: inset 0px -5px 10px 0px rgba(50, 50, 50, 0.25);
+  -moz-box-shadow:    inset 0px -5px 10px 0px rgba(50, 50, 50, 0.25);
+  box-shadow:         inset 0px -5px 10px 0px rgba(50, 50, 50, 0.25);
+}
+
 .blank{
   margin: 1.5em auto;
 }
@@ -185,16 +193,26 @@ h3, h6{
 }
 
 .social{
-  position: fixed;
+  position: relative;
+  display: inline-block;
   list-style: none;
-  margin: 1em;
+  margin: 0 auto;
+  width: auto;
   padding: 0em;
-  bottom: 0em;
-  z-index: 101;
+  text-align: center;
 }
     .social li{
+      cursor: pointer;
       display: block;
+      float: left;
+      border: solid 1px #58baad;
+      width: auto;
+      padding: 0.5em;
+      text-decoration: none;
     }
+        .social li:hover{
+          border-bottom: solid 1px #fff;
+        }
 
 
 /* Formatação dos itens do header */
@@ -352,6 +370,36 @@ h3, h6{
       text-align: center;
       width: 100%;
     }
+        #header .logoSearch .txSearch{
+          margin: 0.5em auto;
+          border: solid 1px #a24;
+          width: 40%;
+          padding: 0.2em 0em 0.2em 0.3em;
+          background: #b15;
+        }
+            #header .logoSearch .txSearch:focus{
+              background: #f2f2f2;
+              width: 60%;
+              transition: width 0.2s linear 0.05s;
+              -moz-transition: width 0.2s linear 0.05s; /* para Mozilla antigo */
+              -o-transition: width 0.2s linear 0.05s; /* para Opera antigo */
+              -webkit-transition: width 0.2s linear 0.05s; /* para Chrome e similares antigos */
+            }
+        #header .logoSearch .btSearch{
+          cursor: pointer;
+          margin: 0.5em auto;
+          border: none;
+          width: auto;
+          padding: 0.15em 0.5em 0.2em 0.5em;
+          background: none;
+        }
+            #header .logoSearch .btSearch:hover{
+              background: #58baad;
+              transition: background 0.1s linear 0.05s;
+              -moz-transition: background 0.1s linear 0.05s; /* para Mozilla antigo */
+              -o-transition: background 0.1s linear 0.05s; /* para Opera antigo */
+              -webkit-transition: background 0.1s linear 0.05s; /* para Chrome e similares antigos */
+            }
 
 /* Formatação dos itens das Tabs */
 
@@ -412,29 +460,34 @@ h3, h6{
           color: #fff;
           background: #c06;
         }
-        .post .postImage{
+        .post .wrappImage{
           min-width: 100%;
           width: 100%;
           height: auto;
           max-height: 300px;
           overflow: hidden;
         }
+        .post .postImage{
+          min-width: 100%;
+          width: 100%;
+          height: auto;
+        }
         .post .postContent{
           margin: 1em 0em;
         }
-        .post .postContent p{
-          vertical-align: baseline;
-          font-size: 0.9em;
-          line-height: 1.4em;
-          color: #555;
-        }
-        .post .postContent p a{
-          color: #555;
-          text-decoration: underline;
-        }
-            .post .postContent p a:hover{
-              color: #c06;
+            .post .postContent p{
+              vertical-align: baseline;
+              font-size: 0.9em;
+              line-height: 1.4em;
+              color: #555;
             }
+                .post .postContent p a{
+                  color: #555;
+                  text-decoration: underline;
+                }
+                    .post .postContent p a:hover{
+                      color: #c06;
+                    }
 
 .cardPost{
   margin: 1em 0em;
@@ -524,9 +577,8 @@ h3, h6{
 }
 
 /* opções de postagens similares */
-
 .thumbnail{
-  display: pointer;
+  cursor: pointer;
   margin: 0.2em 0em;
   background: #58baad;
   text-align: center;
@@ -538,31 +590,79 @@ h3, h6{
           color: #c06;
         }
 
-.thumbnail .wpImage{
-  width: 100%;
-  height: 150px !important;
-  overflow: hidden;
-}
-
-.thumbnail div{
-  padding: 0em !important;
-}
-
-.thumbnail .caption h5{
-  margin: 0em;
-  padding: 0.5em 0em;
-  text-align: center;
-  font-size: 1.2em;
-  color: #fff;
-  text-decoration: none;
-}
-    .thumbnail .caption h5:hover{
-      color: #c06;
-      transition: color 0.3s linear 0.05s;
-      -moz-transition: color 0.3s linear 0.05s; /* para Mozilla antigo */
-      -o-transition: color 0.3s linear 0.05s; /* para Opera antigo */
-      -webkit-transition: color 0.3s linear 0.05s; /* para Chrome e similares antigos */
+    .thumbnail .wpImage{
+      width: 100%;
+      height: 150px !important;
+      overflow: hidden;
     }
+
+    .thumbnail div{
+      padding: 0em !important;
+    }
+
+    .thumbnail .caption h5{
+      margin: 0em;
+      padding: 0.5em 0em;
+      text-align: center;
+      font-size: 1.2em;
+      color: #fff;
+      text-decoration: none;
+    }
+        .thumbnail .caption h5:hover{
+          color: #c06;
+          transition: color 0.3s linear 0.05s;
+          -moz-transition: color 0.3s linear 0.05s; /* para Mozilla antigo */
+          -o-transition: color 0.3s linear 0.05s; /* para Opera antigo */
+          -webkit-transition: color 0.3s linear 0.05s; /* para Chrome e similares antigos */
+        }
+
+.postHome .thumbnail{
+  margin: 0.2em 0em 1em 0em;
+  background: none;
+  border: solid 1px #58baad;
+  text-align: center;
+}
+    .postHome .thumbnail .wpImage{
+      width: 100%;
+      max-height: 250px !important;
+      overflow: hidden;
+    }
+    .postHome .thumbnail .caption h5{
+      color: #58baad;
+    }
+        .postHome .thumbnail .caption h5:hover{
+          color: #c06;
+          background: #fff;
+          transition: color 0.3s linear 0.05s;
+          -moz-transition: color 0.3s linear 0.05s; /* para Mozilla antigo */
+          -o-transition: color 0.3s linear 0.05s; /* para Opera antigo */
+          -webkit-transition: color 0.3s linear 0.05s; /* para Chrome e similares antigos */
+        }
+
+.eduHome .thumbnail{
+  cursor: pointer;
+  margin: 0.2em 0em 2em 0em;
+  border: solid 1px #58baad;
+  background: none;
+  text-align: center;
+}
+    .eduHome .thumbnail .wpImage{
+      width: 100%;
+      max-height: 250px !important;
+      overflow: hidden;
+    }
+    .eduHome .thumbnail .caption h5{
+      color: #58baad;
+    }
+        .eduHome .thumbnail .caption h5:hover{
+          color: #c06;
+          background: #fff;
+          transition: color 0.3s linear 0.05s;
+          -moz-transition: color 0.3s linear 0.05s; /* para Mozilla antigo */
+          -o-transition: color 0.3s linear 0.05s; /* para Opera antigo */
+          -webkit-transition: color 0.3s linear 0.05s; /* para Chrome e similares antigos */
+        }
+
 
 .triangleTop {
   position: absolute;
@@ -701,63 +801,19 @@ h3, h6{
   .column.flow-opposite {float: right;  }
 
   .bg01{
-    background: #c06;
-    border-bottom: solid 2px #a24;
-    z-index: 3;
-    
-    /*shadow*/
-    -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    -moz-box-shadow:    0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    box-shadow:         0px 2px 4px 0px rgba(50, 50, 50, 0.50);
   }
 
   .bg02{
-    background: #f5f5f5;
-    border-bottom: solid 1px #fff;
-    
-    /*shadow*/
-    -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    -moz-box-shadow:    0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    box-shadow:         0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    z-index: 2;
   }
 
   .bg03{
-    background: #58baad;
-    border-top: solid 1px #fff;
-    border-bottom: solid 1px #9bd5cd;
-    
-    /*shadow*/
-    -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    -moz-box-shadow:    0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    box-shadow:         0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    z-index: 1;
   }
 
   .bg04{
-    /*shadow*/
-    -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    -moz-box-shadow:    0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    box-shadow:         0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    
-    /*gradient*/
-    background: #e5e5e5; /* Old browsers */
-    background: -moz-linear-gradient(top,  #f2f2f2 0%, #e5e5e5 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #f2f2f2 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #f2f2f2 0%,#e5e5e5 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #f2f2f2 0%,#e5e5e5 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #f2f2f2 0%,#e5e5e5 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
-    z-index: 100
   }
 
   .bg05{
-    background: url("imgs/Scan.jpeg");
     height: 100px;
-    -webkit-box-shadow: inset 0px -5px 10px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow:    inset 0px -5px 10px 0px rgba(50, 50, 50, 0.75);
-    box-shadow:         inset 0px -5px 10px 0px rgba(50, 50, 50, 0.75);
   }
 
   .blank{
@@ -775,19 +831,6 @@ h3, h6{
   .right{
     text-align: right !important;
   }
-
-  .social{
-    position: fixed;
-    list-style: none;
-    margin: 1em;
-    padding: 0em;
-    bottom: 0em;
-    z-index: 101;
-  }
-      .social li{
-        display: block;
-      }
-
 
   /* Formatação dos itens do header */
   .menuGlobal{
@@ -849,6 +892,7 @@ h3, h6{
   }
       .menuTitle{
         padding: 1em 0em;
+        text-align: left;
       }
           .menuTitle h1{
             font-size: 1em;
@@ -949,6 +993,12 @@ h3, h6{
         margin: 1.5em 0em;
         text-align: right;
       }
+      #header .logoSearch input[type="search"]{
+        max-width: 80%;
+      }
+      #header .logoSearch input[type="submit"]{
+        max-width: 20%;
+      }
 
   /* Formatação dos itens das Tabs */
 
@@ -1009,12 +1059,17 @@ h3, h6{
             color: #fff;
             background: #c06;
           }
-          .post .postImage{
+          .post .wrappImage{
             min-width: 100%;
             width: 100%;
             height: auto;
             max-height: 300px;
             overflow: hidden;
+          }
+          .post .postImage{
+            min-width: 100%;
+            width: 100%;
+            height: auto;
           }
           .post .postContent{
             margin: 1em 0em;
@@ -1296,94 +1351,24 @@ h3, h6{
   .column.flow-opposite {float: right;  }
 
   .bg01{
-    background: #c06;
-    border-bottom: solid 2px #a24;
-    z-index: 3;
-    
-    /*shadow*/
-    -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    -moz-box-shadow:    0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    box-shadow:         0px 2px 4px 0px rgba(50, 50, 50, 0.50);
   }
 
   .bg02{
-    background: #f5f5f5;
-    border-bottom: solid 1px #fff;
-    
-    /*shadow*/
-    -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    -moz-box-shadow:    0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    box-shadow:         0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    z-index: 2;
   }
 
   .bg03{
-    background: #58baad;
-    border-top: solid 1px #fff;
-    border-bottom: solid 1px #9bd5cd;
-    
-    /*shadow*/
-    -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    -moz-box-shadow:    0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    box-shadow:         0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    z-index: 1;
   }
 
   .bg04{
-    /*shadow*/
-    -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    -moz-box-shadow:    0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    box-shadow:         0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-    
-    /*gradient*/
-    background: #e5e5e5; /* Old browsers */
-    background: -moz-linear-gradient(top,  #f2f2f2 0%, #e5e5e5 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  #f2f2f2 0%,#e5e5e5 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  #f2f2f2 0%,#e5e5e5 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  #f2f2f2 0%,#e5e5e5 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  #f2f2f2 0%,#e5e5e5 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
-    z-index: 100
   }
 
   .bg05{
-    background: url("imgs/Scan.jpeg");
     height: 100px;
-    -webkit-box-shadow: inset 0px -5px 10px 0px rgba(50, 50, 50, 0.75);
-    -moz-box-shadow:    inset 0px -5px 10px 0px rgba(50, 50, 50, 0.75);
-    box-shadow:         inset 0px -5px 10px 0px rgba(50, 50, 50, 0.75);
   }
 
   .blank{
     margin: 1.5em auto;
   }
-
-  .center{
-    text-align: center;
-  }
-
-  .left{
-    text-align: left !important;
-  }
-
-  .right{
-    text-align: right !important;
-  }
-
-  .social{
-    position: fixed;
-    list-style: none;
-    margin: 1em;
-    padding: 0em;
-    bottom: 0em;
-    z-index: 101;
-  }
-      .social li{
-        display: block;
-      }
-
-
   /* Formatação dos itens do header */
   .menuGlobal{
     position: relative;
@@ -1443,7 +1428,8 @@ h3, h6{
     border-bottom: #a24;
   }
       .menuTitle{
-        padding: 1em 0em;
+        padding: 1.5em 0em;
+        text-align: left;
       }
           .menuTitle h1{
             font-size: 1em;
@@ -1528,11 +1514,11 @@ h3, h6{
     padding: 0em;
   }
       #header .logoBar{
-        margin: 0.5em 0em;
+        margin: 1em 0em;
         text-align: left;
       }
       #header .logotitle{
-        margin: 1em 0em;
+        margin: 1.75em 0em;
       }
           #header .logotitle a{
             color: #fff;
@@ -1549,66 +1535,46 @@ h3, h6{
 
   /* Formatação dos itens do Main */
   #main{
-    display: block;
-    margin: 0em;
-    padding: 0em;
-    background: none;
-    border-top: dashed 2px #c06;
   }
 
   /* Formatação dos itens do Content */
   #content{
-    display: block;
-    margin: 0em;
-    padding: 0em;
   }
       /* Formatação dos itens do Post */
       .post{
-        position: relative;
-        display: block;
         margin: 1em 0em;
         padding: 0em 1.2em;
-        background: #fff;
-        border-bottom: solid 3px #9bd5cd;
-        border-top: solid 1px #c06;
       }
           .post h1{
             margin: 1em 0em 0em -0.6em;
             padding: 0em 0.5em;
             border-left: solid 3px #9bd5cd;
-            color: #58baad;
           }
           .post h2{
             margin: 0.2em 0em;
-            color: #d04b81;
           }
           .post h3.date{
-            position: absolute;
-            display: block;
             margin: 0em -1.2em;
             border-left: solid 3px #ddd;
             padding: 0.2em 0.5em 0.2em 2em;
-            float: left;
             font-size: 1em;
-            color: #000;
-            background: #f5f5f5;
           }
           .post .code{
-            position: absolute;
-            display: block;
             margin: 2em -1em;
             border-left: solid 3px #a04;
             padding: 0.2em 0.5em 0.2em 2em;
-            float: left;
-            color: #fff;
-            background: #c06;
           }
-          .post .postImage{
+          .post .wrappImage{
             min-width: 100%;
             width: 100%;
             height: auto;
             max-height: 300px;
             overflow: hidden;
+          }
+          .post .postImage{
+            min-width: 100%;
+            width: 100%;
+            height: auto;
           }
           .post .postContent{
             margin: 1em 0em;
