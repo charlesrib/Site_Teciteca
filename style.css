@@ -1,8 +1,18 @@
+/*
+Theme Name: Teciteca UFBA
+Theme URI: http://www.charlesribeiro.com.br
+Author: Charles Ribeiro
+Author URI: http://www.charlesribeiro.com.br
+Description: Design para o Site da Biblioteca Têxtil do Estado da Bahia
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:  Biblioteca, Tecido, Tecitece, Blog, rosa, verde, de uma coluna, duas colunas, barra lateral direita.
+Text Domain: teciteca
+*/
+
 @charset "UTF-8";
 @import url("css/normalize.css");
-/*@import url("css/PreloSlab-Medium.css");
-@import url("css/Prelo-LightItalic.css");
-@import url("css/PreloSlab-ExtraBold.css");*/
 
 
 @font-face {
@@ -214,8 +224,44 @@ h3, h6{
           border-bottom: solid 1px #fff;
         }
 
+.topSocial{
+  position: relative;
+  display: inline-block;
+  list-style: none;
+  margin: 0.5em 0em 0em;
+  width: auto;
+  padding: 0em;
+}
+    .topSocial li{
+      cursor: pointer;
+      display: block;
+      float: left;
+      width: auto;
+      padding: 0.2em;
+      text-decoration: none;
+    }
 
 /* Formatação dos itens do header */
+.login{
+  position: relative;
+  display: block;
+}
+   .login li{
+      display: inline-block;
+      margin: 0.2em 0em;
+    }
+       .login li a{
+          display: block;
+          margin: 0em;
+          padding: 0.2em 1em;
+          text-decoration: none;
+          color: #666;
+        }
+           .login li a:hover{
+              color: #fff;
+              background: #58baad;
+            }
+
 .menuGlobal{
   position: relative;
   display: block;
@@ -371,14 +417,16 @@ h3, h6{
       width: 100%;
     }
         #header .logoSearch .txSearch{
-          margin: 0.5em auto;
+          margin: 0.7em auto;
           border: solid 1px #a24;
+          border-right: none;
           width: 40%;
           padding: 0.2em 0em 0.2em 0.3em;
           background: #b15;
         }
             #header .logoSearch .txSearch:focus{
               background: #f2f2f2;
+              border: solid 1px #a24 !important;
               width: 60%;
               transition: width 0.2s linear 0.05s;
               -moz-transition: width 0.2s linear 0.05s; /* para Mozilla antigo */
@@ -388,13 +436,14 @@ h3, h6{
         #header .logoSearch .btSearch{
           cursor: pointer;
           margin: 0.5em auto;
-          border: none;
+          border: solid 1px #a24;
+          border-left: none;
           width: auto;
           padding: 0.15em 0.5em 0.2em 0.5em;
-          background: none;
+          background: #b15;
         }
             #header .logoSearch .btSearch:hover{
-              background: #58baad;
+              background: #a04;
               transition: background 0.1s linear 0.05s;
               -moz-transition: background 0.1s linear 0.05s; /* para Mozilla antigo */
               -o-transition: background 0.1s linear 0.05s; /* para Opera antigo */
@@ -488,6 +537,34 @@ h3, h6{
                     .post .postContent p a:hover{
                       color: #c06;
                     }
+.form-group{
+  position: relative;
+  display: block;
+  margin: 0.5em 0em;
+  color: #555;
+}
+.form-group label, .form-group input{
+  position: relative;
+  width: 100%;
+  margin: 0.2em 0em;
+  padding: 0.3em;
+}
+.form-group input[type="reset"]{
+  display: inline-block;
+  float: left;
+  width: auto !important;
+  padding: auto 1em;
+}
+.form-group input[type="submit"]{
+  display: inline-block;
+  float: left;
+  width: auto !important;
+  padding: auto 1em;
+}
+.form-group textarea{
+  width: 100%;
+  padding: 0.3em 0em;
+}
 
 .cardPost{
   margin: 1em 0em;
@@ -1507,6 +1584,24 @@ h3, h6{
                     padding: 0 0 0 1em;
                     display: block;
                   }
+  .topSocial{
+    position: relative;
+    display: inline-block;
+    list-style: none;
+    margin: 2em 0em;
+    width: auto;
+    padding: 0em;
+  }
+      .topSocial li{
+        cursor: pointer;
+        display: block;
+        float: left;
+        width: auto;
+        padding: 0.2em;
+        text-decoration: none;
+      }
+
+
 
   #header{
     display: block;

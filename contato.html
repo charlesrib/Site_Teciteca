@@ -11,6 +11,7 @@
 
        <script type="text/javascript" src="js/teciteca.js"></script>
        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+       <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
 
        <title>TECITECA - Biblioteca de catalogação de tecidos da Bahia</title>
    </head>
@@ -19,22 +20,22 @@
    <body>
 
 
-    <div class="row bg04">
+      <div class="row bg04">
 
-      <nav class="menuGlobal" role="navigation">
+        <nav class="menuGlobal" role="navigation">
 
-            <ul role="menubar">
+              <ul role="menubar">
 
-                <!-- Elementos individuais da lista -->
-                <li role="menuitem"><a href="#">UFBA</a></li>
-                <li role="menuitem"><a href="#">Belas Artes</a></li>
-                <li role="menuitem"><a href="#">Lab Griot</a></li>
-            
-            </ul>
+                  <!-- Elementos individuais da lista -->
+                  <li role="menuitem"><a href="#">UFBA</a></li>
+                  <li role="menuitem"><a href="#">Belas Artes</a></li>
+                  <li role="menuitem"><a href="#">Lab Griot</a></li>
+              
+              </ul>
 
-      </nav>
+        </nav>
 
-    </div>
+      </div>
 
 
       <!-- Elemento centralizador em linha -->
@@ -61,7 +62,7 @@
                     <nav class="column two menubar" role="navigation">
 
                           <div class="menuTitle"><h1><a href="#"><img src="imgs/icons/menu.png"><span> Menu</span></a></h1></div>
-                           <ul id="menu" class="logoBar" role="menubar">
+                         <ul id="menu" class="logoBar" role="menubar">
 
                               <!-- Elementos individuais da lista -->
                               <li role="menuitem"><a href="index.html">Home</a></li>
@@ -137,222 +138,56 @@
 
 
                     <!-- Área de conteúdo central -->
-                    <section class="column nine" id="content" role="article">
+                    <section class="column six post" role="article">
 
-                          <div class="post">
+                        <div class="row">&nbsp;</div>
 
-                              <header role="heading">
-                                  <a href="single.html"><h1>Titulo do primeiro artigo</h1></a>
-                                  <h2>subtitulo para o item</h2>
-                              </header>
+                        <h2>Envie sua mensagem</h2>
 
-                              <article>
+                        <form role="form" method="post" action="">
+                            <div class="form-group">
+                              <label for="nome">* Nome</label>
+                              <input type="text" class="form-control" name="nome" value="<?php echo h(@$_POST['nome']) ?>" id="nome" placeholder="Qual o seu nome?" />
+                            </div>
+                            <div class="form-group">
+                              <label for="email">* E-mail</label>
+                              <input type="email" class="form-control" name="email" value="<?php echo h(@$_POST['email']) ?>" id="email"  placeholder="Qual o seu E-mail?"/>
+                            </div>
+                            <div class="form-group">
+                              <label for="assunto">* Assunto</label>
+                              <input type="text" class="form-control" name="assunto" value="<?php echo h(@$_POST['assunto']) ?>" id="assunto"  placeholder="Do que se trata essa mensagem?"/>
+                            </div>
+                            <div class="form-group">
+                              <label for="msg">* Mensagem</label>
+                              <textarea class="form-control" name="msg" rows="5"><?php echo h(@$_POST['msg']) ?></textarea>
+                            </div>
+                            <div class="form-group">
+                              <input type="reset" class="btn btn-default" name="enviar" value="Limpar" />
+                              <input type="submit" class="btn btn-default" name="enviar" value="Enviar" />
+                            </div>
+                        </form>
 
-                                  <div>
-
-                                      <h3 class="date">01 de Janeiro de 2016</h3>
-                                      <h3 class="code">código do tecido</h3>
-                                      <div class="wrappImage"><img src="imgs/Scan.jpeg" class="postImage"></div>
-
-                                  </div>
-
-                              </article>
-
-                              <footer role="complementary">
-
-                                  <ul class="row clearfix tagcloud">
-                                      <h3>Tags: </h3>
-                                      <li><a href="#">Verão</a></li>
-                                      <li><a href="#">Vestido</a></li>
-                                      <li><a href="#">Visual Novo</a></li>
-                                  </ul>
-
-                              </footer>
-                              
-                              <div class="blank"></div>
-
-                          </div>
-
-                          <div class="post">
-
-                              <header role="heading">
-                                  <a href="single.html"><h1>Titulo do segundo artigo</h1></a>
-                                  <h2>subtitulo para o item</h2>
-                              </header>
-
-                              <article>
-
-                                  <div>
-
-                                      <h3 class="date">01 de Fevereiro de 2016</h3>
-                                      <h3 class="code">código do tecido</h3>
-                                      <div class="wrappImage"><img src="imgs/Scan.jpeg" class="postImage"></div>
-
-                                  </div>
-
-                              </article>
-
-                              <footer role="complementary">
-
-                                  <ul class="row clearfix tagcloud">
-                                      <h3>Tags: </h3>
-                                      <li><a href="#">Moda</a></li>
-                                      <li><a href="#">Verão</a></li>
-                                      <li><a href="#">Vestido</a></li>
-                                      <li><a href="#">Visual Novo</a></li>
-                                  </ul>
-
-                              </footer>
-                              
-                              <div class="blank"></div>
-
-                          </div>
-
-                          <div class="post">
-
-                              <header role="heading">
-                                  <a href="single.html"><h1>Titulo do terceiro artigo</h1></a>
-                                  <h2>subtitulo para o item</h2>
-                              </header>
-
-                              <article>
-
-                                  <div>
-
-                                      <h3 class="date">01 de Março de 2016</h3>
-                                      <h3 class="code">código do tecido</h3>
-                                      <div class="wrappImage"><img src="imgs/Scan.jpeg" class="postImage"></div>
-
-                                  </div>
-
-                              </article>
-
-                              <footer role="complementary">
-
-                                  <ul class="row clearfix tagcloud">
-                                      <h3>Tags: </h3>
-                                      <li><a href="#">Moda</a></li>
-                                      <li><a href="#">Vestido</a></li>
-                                      <li><a href="#">Visual Novo</a></li>
-                                  </ul>
-
-                              </footer>
-                              
-                              <div class="blank"></div>
-
-                          </div>
-
-                          <div class="post">
-
-                              <header role="heading">
-                                  <a href="single.html"><h1>Titulo do quarto artigo</h1></a>
-                                  <h2>subtitulo para o item</h2>
-                              </header>
-
-                              <article>
-
-                                  <div>
-
-                                      <h3 class="date">01 de Abril de 2016</h3>
-                                      <h3 class="code">código do tecido</h3>
-                                      <div class="wrappImage"><img src="imgs/Scan.jpeg" class="postImage"></div>
-
-                                  </div>
-
-                              </article>
-
-                              <footer role="complementary">
-
-                                  <ul class="row clearfix tagcloud">
-                                      <h3>Tags: </h3>
-                                      <li><a href="#">Moda</a></li>
-                                      <li><a href="#">Visual Novo</a></li>
-                                  </ul>
-
-                              </footer>
-                              
-                              <div class="blank"></div>
-
-                          </div>
-
-                          <div class="post">
-
-                              <header role="heading">
-                                  <a href="single.html"><h1>Titulo do quinto artigo</h1></a>
-                                  <h2>subtitulo para o item</h2>
-                              </header>
-
-                              <article>
-
-                                  <div>
-
-                                      <h3 class="date">01 de Maio de 2016</h3>
-                                      <h3 class="code">código do tecido</h3>
-                                      <div class="wrappImage"><img src="imgs/Scan.jpeg" class="postImage"></div>
-
-                                  </div>
-
-                              </article>
-
-                              <footer role="complementary">
-
-                                  <ul class="row clearfix tagcloud">
-                                      <h3>Tags: </h3>
-                                      <li><a href="#">Moda</a></li>
-                                      <li><a href="#">Verão</a></li>
-                                  </ul>
-
-                              </footer>
-                              
-                              <div class="blank"></div>
-
-                          </div>
-
-                          <ul class="row clearfix btPrevNext">
-
-                              <li><a href="#" class="column six"><strong>&laquo;</strong> Anterior</a></li>
-                              <li><a href="#" class="column six">Próximo <strong>&raquo;</strong></a></li>
-
-                          </ul>
-
-                          <div class="blank"></div>
+                        <div class="blank">&nbsp;</div>
 
                     </section>
+                    
+                    <section class="column six" role="aplication">
 
+                        <div class="row">&nbsp;</div>
 
-                    <!-- Barra lateral do site -->
-                    <aside class="column three" id="sidebar" role="complementary">
+                        <div id="googleMap" style="width:100%;height:380px;"></div>
 
-                          <section>
+                        <div class="row post center"><p>End.: Rua Araújo Pinho, 16-202. Canela - Salvador - Bahia</p></div>
 
-                                  <h3><a href="">widget 01</a></h3>
-                                  <div><p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p></div>
-                                  
-                          </section>
-
-                          <section>
-
-                                  <h3><a href="">widget 01</a></h3>
-                                  <div><p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p></div>
-                                  
-                          </section>
-
-                          <section>
-
-                                  <h3><a href="">widget 01</a></h3>
-                                  <div><p>Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.</p></div>
-                                  
-                          </section>
-
-                    </aside>
-
-
-
+                    </section>
+                    
             </section>
 
 
       </div>
       </div>
+
+      <div class="blank">&nbsp;</div>
 
       <div class="row bg03">
       <div class="container">
@@ -471,6 +306,23 @@
           $('.menuTitle').click(function(){
               $('#menu').slideToggle('fast');
       });
+
+  </script>
+
+  <script>
+  function initialize()
+  {
+  var mapProp = {
+    center:new google.maps.LatLng(-12.9915908,-38.5213286),
+    zoom:19,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+  var map=new google.maps.Map(document.getElementById("googleMap")
+    ,mapProp);
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+  map.setTilt(0);
 
   </script>
 
