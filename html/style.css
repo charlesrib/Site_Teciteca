@@ -188,8 +188,6 @@ h3, h6{
   box-shadow:         inset 0px -5px 10px 0px rgba(50, 50, 50, 0.25);
 }
 
-.twhite{color: #fff} .tpurple{color: #c06} .tmarino{color: #58baad} .tgray{color: #e5e5e5}
-
 .blank{
   margin: 1.5em auto;
 }
@@ -708,7 +706,7 @@ h3, h6{
 
 .tagcloud{
   list-style: none;
-  margin: 0em 0em 2em 0em;
+  margin: 0em;
   padding: 0em;
 }
     .tagcloud li{
@@ -942,30 +940,6 @@ h3, h6{
                   color: #c06;
                   background: #9bd5cd;
                 }
-
-#footer .tagcloud{
-  list-style: none;
-  margin: 0.5em 0em;
-  padding: 0em;
-}
-    #footer .tagcloud li{
-      display: inline-block;
-      margin: 0.5em 0em !important;
-      padding: 0em;
-    }
-        #footer .tagcloud a{
-          display: inline-block;
-          margin: 0.2em 0em;
-          padding: 0.2em 0.5em;
-          font-size: 1em !important;
-          color: #58baad;
-          text-decoration: none;
-          background: #fff;
-        }
-            #footer .tagcloud a:hover{
-              background: #9bd5cd;
-              color: #c06;
-            }
 
 .recentcomments{
   display: block;
@@ -1385,7 +1359,7 @@ h3, h6{
 
   .tagcloud{
     list-style: none;
-    margin: 0em 0em 2em 0em;
+    margin: 0em;
     padding: 0em;
   }
       .tagcloud li{
@@ -1892,7 +1866,7 @@ h3, h6{
 
   .tagcloud{
     list-style: none;
-    margin: 0em 0em 1em 0em;
+    margin: 0em;
     padding: 0em;
   }
       .tagcloud li{
