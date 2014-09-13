@@ -9,10 +9,10 @@
 
 
       <!-- Zona do rodapé do site -->
-      <section class="row clearfix" role="article">
+      <section class="row clearfix" id="tabs" role="article">
         
-              <!-- zona para colocar widget do intagram -->
-              <div class="column twelve blank center"><?php instagram_header(); ?></div>
+            <!-- zona para colocar o slider -->
+            <div class="column twelve blank center">Zona do slider</div>
 
       </section>
 
@@ -70,14 +70,6 @@
                                   <div class="cardPost">
 
                                       <?php if ( function_exists( 'get_author_bio_box' ) ) echo get_author_bio_box(); ?>
-
-                                  </div>
-
-                                  <div class="row clearfix">
-
-                                      <div class="column six cardPost">
-                                            botão de download
-                                      </div>
 
                                   </div>
 

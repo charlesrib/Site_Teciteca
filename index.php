@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html  xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 
-   <head>
+  <head>
        <meta charset="utf-8"/>
        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -23,10 +23,10 @@
 
        <title><?php wp_title(''); ?></title>
        
-   </head>
+  </head>
 
 
-   <body>
+  <body>
 
 
     <div class="row bg04">
@@ -36,8 +36,8 @@
             <ul role="menubar">
 
                 <!-- Elementos individuais da lista -->
-                <li role="menuitem"><a href="#">UFBA</a></li>
-                <li role="menuitem"><a href="#">Belas Artes</a></li>
+                <li role="menuitem"><a href="https://www.ufba.br/">UFBA</a></li>
+                <li role="menuitem"><a href="http://www.belasartes.ufba.br/">Belas Artes</a></li>
                 <li role="menuitem"><a href="#">Lab Griot</a></li>
             
             </ul>
@@ -64,7 +64,7 @@
                            <ul id="menu" class="logoBar" role="menubar">
 
                               <!-- Elementos individuais da lista -->
-                              <li role="menuitem"><a href="<?php bloginfo( 'url' ) ?>/">Home</a></li>
+                              <li role="menuitem"><a href="<?php bloginfo( 'url' ) ?>/">Institucinoal</a></li>
                               <?php wp_list_pages('title_li='); ?>
                           
                           </ul>
@@ -117,10 +117,26 @@
 
 
         <!-- Zona do rodapé do site -->
-        <section class="row clearfix" id="tabs" role="article">
+        <section class="row clearfix tabs" id="tabs" role="article">
           
-                <!-- zona para colocar widget do intagram -->
-              <div class="column twelve blank center"><?php instagram_header(); ?></div>
+              <!-- zona para colocar o slider -->
+
+              <ul>
+                  <li><a href="#tb1">Tab 01</a></li>
+                  <li><a href="#tb2">Tab 02</a></li>
+                  <li><a href="#tb3">Tab 03</a></li>
+                  <li><a href="#tb4">Tab 04</a></li>
+                  <li><a href="#tb5">Tab 05</a></li>
+              </ul>
+
+              <section>
+                  <div id="tb1">textos ou imagens 01</div>
+                  <div id="tb2">textos ou imagens 02</div>
+                  <div id="tb3">textos ou imagens 03</div>
+                  <div id="tb4">textos ou imagens 04</div>
+                  <div id="tb5">textos ou imagens 05</div>
+              </section>
+
 
         </section>
 
@@ -130,19 +146,13 @@
               <section class="row clearfix" id="main" role="main">
 
                       
-                      <!-- Área de conteúdo central 
+                      <!-- Área de conteúdo central cat=3&-->
 
-                      <div class="column six">
+                      <div class="row clearfix homeIntro">
 
-                          <img src="#" alt="Foto bonitona da Teciteca">
-                          
+                          <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Institucional') ) : ?><?php endif; ?>
+
                       </div>
-
-                      <div class="column six">
-
-                          <p><blockquote>Texto falando sobre a teciteca</blockquote></p>
-                          
-                      </div>cat=3&-->
 
                       <div class="row clearfix postHome">
 

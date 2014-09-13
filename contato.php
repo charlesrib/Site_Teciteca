@@ -42,8 +42,8 @@ Template Name: Contato
               <ul role="menubar">
 
                   <!-- Elementos individuais da lista -->
-                  <li role="menuitem"><a href="#">UFBA</a></li>
-                  <li role="menuitem"><a href="#">Belas Artes</a></li>
+                  <li role="menuitem"><a href="https://www.ufba.br/">UFBA</a></li>
+                  <li role="menuitem"><a href="http://www.belasartes.ufba.br/">Belas Artes</a></li>
                   <li role="menuitem"><a href="#">Lab Griot</a></li>
               
               </ul>
@@ -80,7 +80,7 @@ Template Name: Contato
                            <ul id="menu" class="logoBar" role="menubar">
 
                               <!-- Elementos individuais da lista -->
-                              <li role="menuitem"><a href="<?php bloginfo( 'url' ) ?>/">Home</a></li>
+                              <li role="menuitem"><a href="<?php bloginfo( 'url' ) ?>/">Institucinoal</a></li>
                               <?php wp_list_pages('title_li='); ?>
                           
                           </ul>
@@ -178,8 +178,8 @@ Template Name: Contato
       <!-- Zona do rodapé do site -->
       <section class="row clearfix" id="tabs" role="article">
         
-              <!-- zona para colocar widget do intagram -->
-              <div class="column twelve blank center"><?php instagram_header(); ?></div>
+            <!-- zona para colocar o slider -->
+            <div class="column twelve blank center">Zona do slider</div>
 
       </section>
 
@@ -233,11 +233,19 @@ Template Name: Contato
                     
                     <section class="column six" role="aplication">
 
+                        <div class="row post">
+
+                            <p>
+                                <small><strong>End.:</strong> Rua Araújo Pinho, 16-202. Canela - Salvador - Bahia</small><br>
+                                <small><strong>E-mail:</strong> teciteca.ufba@gmail.com</small><br>
+                                <small><strong>Telefone:</strong> Breve <!--+55 (71) 0000-0000--></small><br>
+                            </p>
+
+                        </div>
+
                         <div class="row">&nbsp;</div>
 
                         <div id="googleMap" style="width:100%;height:380px;"></div>
-
-                        <div class="row post center"><p>End.: Rua Araújo Pinho, 16-202. Canela - Salvador - Bahia</p></div>
 
                     </section>
 

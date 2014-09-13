@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: Artigos
+*/
+?>
 <!DOCTYPE html>
 <html  xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 
@@ -127,15 +132,24 @@
 
 
                     <!-- Área de conteúdo central -->
-                    <section class="column twelve" id="content" role="article">
+                    <section class="column nine" id="content" role="article">
 
+                          <?php query_posts('showposts=6'); ?>
                           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                          <div class="post">
+                          <div class="post <?php post_class(); ?>"  id="post-<?php the_ID(); ?>">
+
+                              <header role="heading">
+                                  <h1><a href="<?php the_permalink() ?>"><?php the_title(); ?><?php edit_post_link(' | Editar'); ?></a></h1>
+                                  <h2><?php the_subtitle(); ?></h2>
+                              </header>
+
 
                               <article>
 
                                   <div>
 
+                                      <h3 class="date"><span><?php the_time('d') ?></span> de <span><?php the_time('M') ?></span> de <span><?php the_time('Y') ?></span></h3>
+                                      <h3 class="code">código do tecido</h3>
                                       <div class="wrappImage">
 
                                         <?php
@@ -151,29 +165,54 @@
 
                                   </div>
 
-                                  <div class="postContent">
-
-                                      <?php the_content(); ?>
-
-                                  </div>
-
                               </article>
+
+                              <footer role="complementary">
+
+                                  <ul class="row clearfix tagcloud">
+                                      <h3>Tags: </h3>
+                                      <li><?php echo the_tags(' '); ?></li>
+                                  </ul>
+
+                              </footer>
 
                           </div>
                           <?php endwhile?>
 
-                            <?php else: ?>
-                            <section  class="column twelve content">
-                              <header role="heading">
-                                <h1>Não foi encontrado nenhuma postagem</h1>
-                                <h2>Erro 404</h2>
-                                <p>Lamentamos mas não foram encontrados artigos.</p>
-                              </header>
-                            </section>
-                            <?php endif; ?>
-                          <div class="blank">&nbsp;</div>
+                          <?php global $wp_query; $total_pages = $wp_query->max_num_pages; if ( $total_pages > 1 ) { ?>
+                          <ul class="row clearfix btPrevNext">
 
+                              <li class="column six right"><?php previous_post_link( '%link', '<strong>&laquo;</strong> Anterior' ) ?></li>
+                              <li class="column six left"><?php next_post_link( '%link', 'Proximo <strong>&raquo;</strong>' ) ?></li>
+                              <?php } ?>
+
+                          </ul>
+
+                          <?php else: ?>
+                          <section  class="column twelve post">
+                            <header role="heading">
+
+                              <h1>Não foi encontrada nenhuma postagem</h1>
+                              <h2>Erro 404</h2>
+
+                              <p><?php _e( 'Desculpe, não encontramos nenhuma fonte corresponde aos itens pesquisados. Por favor, tente novamente com palavras-chave diferentes.', 'your-theme' ); ?></p>
+                              
+                              <?php get_search_form(); ?>   
+
+                            </header>
+                            <div class="row">&nbsp;</div>
+
+                          </section>
+                          <?php endif; ?>
+
+                    <div class="blank">&nbsp;</div>
                     </section>
+
+
+                    <!-- Barra lateral do site -->
+                    <?php get_sidebar(); ?> 
+
+
 
             </section>
 

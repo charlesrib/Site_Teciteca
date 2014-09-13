@@ -37,8 +37,8 @@
               <ul role="menubar">
 
                   <!-- Elementos individuais da lista -->
-                  <li role="menuitem"><a href="#">UFBA</a></li>
-                  <li role="menuitem"><a href="#">Belas Artes</a></li>
+                  <li role="menuitem"><a href="https://www.ufba.br/">UFBA</a></li>
+                  <li role="menuitem"><a href="http://www.belasartes.ufba.br/">Belas Artes</a></li>
                   <li role="menuitem"><a href="#">Lab Griot</a></li>
               
               </ul>
@@ -75,7 +75,7 @@
                            <ul id="menu" class="logoBar" role="menubar">
 
                               <!-- Elementos individuais da lista -->
-                              <li role="menuitem"><a href="<?php bloginfo( 'url' ) ?>/">Home</a></li>
+                              <li role="menuitem"><a href="<?php bloginfo( 'url' ) ?>/">Institucinoal</a></li>
                               <?php wp_list_pages('title_li='); ?>
                           
                           </ul>

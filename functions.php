@@ -1,6 +1,10 @@
 
 <?php
 
+if ( is_user_logged_in() ) { // checar se é um usuário autenticado
+show_admin_bar( true ); // mostrar a barra administrativa
+}
+
 /**
  * Add support for a custom header image.
  */
@@ -39,9 +43,11 @@ if (function_exists('register_sidebar'))
     ));
 
     register_sidebar(array(
-        'name'          => 'H_instagram',
-        'before_widget' => '<div class="column twelve blank center">',
-        'after_widget'  => '</div>',
+        'name'          => 'Institucional',
+        'before_widget' => '<section class="column six postInst">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h1>',
+        'after_title'   => '</h1>',
     ));
 
 }
@@ -220,9 +226,9 @@ function insert_meta_data( $content ) {
     $meta = get_post_meta( $post->ID, 'upload_file', true );
  
     if ( $meta ) {
-        $content .= '<div class="cardPost2 bggreen">';
+        $content .= '<div class="row btDownload center">';
         $content .= '<a download href="' . $meta . '" title="Clique para iniciar o download">';
-        $content .= '<div><img src="http://www.cacaleao.com.br:2082/cpsess2022495817/viewer/home%2fcacaleao%2fpublic_html/bt_down.png" /></div><div>Faça o download do arquivo</div>';
+        $content .= '<div><img src="http://www.cacaleao.com.br/bt_down.png" /></div><div>Faça o download do arquivo</div>';
         $content .= '</a>';
         $content .= '</div>';
     }
