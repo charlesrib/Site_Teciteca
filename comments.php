@@ -40,7 +40,7 @@
  
                 <div class="panel panel-success">
                     <div class="panel-heading">Você está comentando como:</div>
-                    <div class="panel-body ">
+                    <div class="panel-body">
                         <p><a href="<?php echo get_option('siteurl'); ?>/wp-admin/profile.php"><?php echo $user_identity; ?></a> | <a href="<?php echo wp_logout_url(); ?>" title="Sair desta conta">Sair desta conta <span class="glyphicon glyphicon-remove"></span></a></p>
                     </div>
                 </div>
@@ -65,15 +65,15 @@
                 <div class="form-group">
                     <label for="comment">*Mensagem:</label>
                     <textarea class="form-control" name="comment" id="comment" rows="5" cols=""></textarea>
-                    <input class="btn btn-default" type="reset" value="Limpar" />
-                    <input class="btn btn-default" type="submit" value="Enviar" />
+                    <input class="btn_reset" type="reset" value="Limpar" />
+                    <input class="btn_submit" type="submit" value="Enviar" />
                 </div>
  
                 <?php comment_id_fields(); ?>
                 <?php do_action('comment_form', $post->ID); ?>
             </fieldset>
         </form>
-        <button type="button" class="btn btn-default"><?php cancel_comment_reply_link('Cancelar'); ?></button>
+        <button type="button" class="btn_cancel"><?php cancel_comment_reply_link('Cancelar'); ?></button>
         </div>
     <?php else : ?>
     <h3>Comentários fechados para este post!</h3>

@@ -9,12 +9,28 @@
 
 
       <!-- Zona do rodapé do site -->
-      <section class="row clearfix" id="tabs" role="article">
+      <!-- <section class="row clearfix tabs" id="tabs" role="article">
         
-            <!-- zona para colocar o slider -->
-            <div class="column twelve blank center">Zona do slider</div>
+            zona para colocar o slider 
 
-      </section>
+            <ul>
+                <li><a href="#tb1">Tab 01</a></li>
+                <li><a href="#tb2">Tab 02</a></li>
+                <li><a href="#tb3">Tab 03</a></li>
+                <li><a href="#tb4">Tab 04</a></li>
+                <li><a href="#tb5">Tab 05</a></li>
+            </ul>
+
+            <section>
+                <div id="tb1">textos ou imagens 01</div>
+                <div id="tb2">textos ou imagens 02</div>
+                <div id="tb3">textos ou imagens 03</div>
+                <div id="tb4">textos ou imagens 04</div>
+                <div id="tb5">textos ou imagens 05</div>
+            </section>
+
+
+      </section>-->
 
       <div class="container">
 
@@ -39,7 +55,7 @@
                                   <div>
 
                                       <h3 class="date"><span><?php the_time('d') ?></span> de <span><?php the_time('M') ?></span> de <span><?php the_time('Y') ?></span></h3>
-                                      <h3 class="code">código do tecido</h3>
+                                      <h3 class="code"><?php echo get_the_category_list(' '); ?></h3>
                                       <div class="wrappImage">
 
                                         <?php

@@ -10,7 +10,7 @@
                         <ul class="menubar">
 
                             <!-- Elementos individuais da lista -->
-                              <li role="menuitem"><a href="<?php bloginfo( 'url' ) ?>/">Institucinoal</a></li>
+                              <li role="menuitem"><a href="<?php bloginfo( 'url' ) ?>/">Institucional</a></li>
                               <?php wp_list_pages('title_li='); ?>
 
                         </ul>
@@ -83,3 +83,4 @@
   </script>
 
 </html>
+<?php wp_footer() ?>

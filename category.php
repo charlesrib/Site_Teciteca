@@ -39,7 +39,7 @@
                                   <div>
 
                                       <h3 class="date"><span><?php the_time('d') ?></span> de <span><?php the_time('M') ?></span> de <span><?php the_time('Y') ?></span></h3>
-                                      <h3 class="code">código do tecido</h3>
+                                      <h3 class="code"><?php echo get_the_category_list(' '); ?></h3>
                                       <div class="wrappImage">
 
                                         <?php

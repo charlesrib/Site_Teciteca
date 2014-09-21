@@ -7,7 +7,7 @@
 
        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
-       <link rel="shortcut icon" href="icon.png" >
+       <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/icon.png" >
        <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
        <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); wp_head(); ?>
@@ -28,6 +28,24 @@
 
 
    <body>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '646608545453782',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
 
       <div class="row bg04">
@@ -75,7 +93,7 @@
                            <ul id="menu" class="logoBar" role="menubar">
 
                               <!-- Elementos individuais da lista -->
-                              <li role="menuitem"><a href="<?php bloginfo( 'url' ) ?>/">Institucinoal</a></li>
+                              <li role="menuitem"><a href="<?php bloginfo( 'url' ) ?>/">Institucional</a></li>
                               <?php wp_list_pages('title_li='); ?>
                           
                           </ul>

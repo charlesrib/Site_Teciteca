@@ -122,10 +122,15 @@ h3, h6{
   padding: 0em;
 }
 
+#wpadminbar{
+  position: fixed !important;
+  z-index: 100 !important;
+}
+
 .bg01{
   background: #c06;
   border-bottom: solid 2px #a24;
-  z-index: 3;
+  z-index: 2;
   
   /*shadow*/
   -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.50);
@@ -141,7 +146,7 @@ h3, h6{
   -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.50);
   -moz-box-shadow:    0px 2px 4px 0px rgba(50, 50, 50, 0.50);
   box-shadow:         0px 2px 4px 0px rgba(50, 50, 50, 0.50);
-  z-index: 2;
+  z-index: 1;
 }
 
 .bg03{
@@ -171,7 +176,7 @@ h3, h6{
   background: -ms-linear-gradient(top,  #f2f2f2 0%,#e5e5e5 100%); /* IE10+ */
   background: linear-gradient(to bottom,  #f2f2f2 0%,#e5e5e5 100%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
-  z-index: 100
+  z-index: 3;
 }
 
 .bg05{
@@ -513,6 +518,42 @@ h3, h6{
   background: none;
   border-top: dashed 2px #c06;
 }
+.logoSearch{
+  margin: 0em;
+  width: 100%;
+}
+    .logoSearch .txSearch{
+      margin: 0.7em auto;
+      border: solid 1px #a04;
+      border-right: none;
+      width: 40%;
+      padding: 0.26em 0em 0.2em 0.3em;
+      background: #b15;
+    }
+        .logoSearch .txSearch:focus{
+          background: #f2f2f2;
+          width: 60%;
+          transition: width 0.2s linear 0.05s;
+          -moz-transition: width 0.2s linear 0.05s; /* para Mozilla antigo */
+          -o-transition: width 0.2s linear 0.05s; /* para Opera antigo */
+          -webkit-transition: width 0.2s linear 0.05s; /* para Chrome e similares antigos */
+        }
+    .logoSearch .btSearch{
+      cursor: pointer;
+      margin: 0.5em auto;
+      border: solid 1px #a24;
+      border-left: none;
+      width: auto;
+      padding: 0.15em 0.5em 0.2em 0.5em;
+      background: #b15;
+    }
+        .logoSearch .btSearch:hover{
+          background: #a04;
+          transition: background 0.1s linear 0.05s;
+          -moz-transition: background 0.1s linear 0.05s; /* para Mozilla antigo */
+          -o-transition: background 0.1s linear 0.05s; /* para Opera antigo */
+          -webkit-transition: background 0.1s linear 0.05s; /* para Chrome e similares antigos */
+        }
 
 /* Formatação dos itens do Content */
 #content{
@@ -564,6 +605,12 @@ h3, h6{
           color: #fff;
           background: #c06;
         }
+        .post .code a{
+          color: #fff;
+        }
+        .post .code a:hover{
+          color: #fff;
+        }
         .post .wrappImage{
           min-width: 100%;
           width: 100%;
@@ -611,7 +658,6 @@ h3, h6{
 }
     #comments h3{
       border: none;
-      border-top: solid 1px #ccc;
       color: #c06;
       font-size: 1.6em;
     }
@@ -626,31 +672,32 @@ h3, h6{
       margin: 0.5em 0em;
       min-width: 100%;
 
-      border: solid 1px #ccc;
+      border: none;
       border-left: solid 10px #c06;
-      background: #e4e4e4;
+      background: #f2f2f2;
     }
-    .commentlist li .commentmetadata a{
-      display: block;
-      float: left;
-      padding: 0.3em 0.5em;
-      margin-left: -9px;
-      background: #58baad;
-      color: #fff;
-    }
+        .commentlist li .commentmetadata a{
+          position: relative;
+          float: left;
+          top: 0em;
+          display: block;
+          margin: 0em;
+          padding: 0.3em 0.5em;
+          color: #fff;
+          background: #58baad;
+        }
         .commentlist li a{
           color: #c06;
           text-decoration: none;
         }
-            .commentlist li a:hover{
-              color: #000;
-              text-decoration: none;
-            }
 
     .commentlist .comment-body{
       margin-bottom: none !important;
       border: none;
-      border-bottom: dotted 1px #666;
+      border-bottom: dashed 1px #666;
+    }
+    .panel-body p a{
+      color: #c06;
     }
         .commentlist .comment-body p{
           display: inline-block;
@@ -669,7 +716,6 @@ h3, h6{
               color: #fff;
               text-decoration: none;
             }
-
                 .commentlist .comment-body .comment-edit-link:hover{
                   background: #c06;
                   color: #fff;
@@ -680,7 +726,7 @@ h3, h6{
               margin: 1em 0em 0em 0em;
               min-width: 100%;
 
-              border: solid 1px #ccc;
+              border: none;
               border-left: solid 10px #ccc;
               background: #e5e5e5;
             }
@@ -688,7 +734,7 @@ h3, h6{
     .commentlist .reply a{
       position: relative;
       display: block;
-      float: right;
+      float: left;
       width: auto;
       padding: 0.5em;
       background: #333;
@@ -947,11 +993,14 @@ h3, h6{
 }
     #sidebar section{
       display: block;
-      margin: 1em 0em;
+      margin: 1em 0em 1.5em 0em;
       padding: 0em 1em;
       color: #555;
       font-size: 0.9em;
     }
+        #sidebar section p{
+          padding: 0em 0.5em;
+        }
         #sidebar section h3{
           position: relative;
           margin: 0em;
@@ -967,7 +1016,7 @@ h3, h6{
                 }
     #sidebar section ul{
       display: block;
-      list-style: none;
+      list-style: square;
       padding: 0em;
       margin:0em;
     }
@@ -977,9 +1026,9 @@ h3, h6{
         }
             #sidebar section ul li a{
               display: block;
-              border-bottom: solid 1px #eee;
+              border-bottom: solid 1px #ddd;
               width: 100%;
-              padding: 0.5em;
+              padding: 0.5em 1em 0.5em 0.5em;
               color: #666;
             }
                 #sidebar section ul li a:hover{
@@ -1130,8 +1179,8 @@ h3, h6{
 #############################################################
 #############################################################
 #############################################################
-#################################### Medium screens (640px) */
-@media (min-width: 40rem) {
+#################################### Medium screens (740px) */
+@media (min-width: 46.25rem) {
 
   html {
     font-size: 110%;
@@ -1573,7 +1622,7 @@ h3, h6{
   }
       #sidebar section{
         display: block;
-        margin: 1em 0em;
+        margin: 1em 0em 1.5em 0em;
         padding: 0em 1em;
         color: #555;
         font-size: 0.9em;
@@ -1672,39 +1721,6 @@ h3, h6{
 
   html {
     font-size: 120%;
-  }
-
-
-  .column {
-    float: left;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  .column.one {width: 8.33%;  }
-  .column.two {width: 16.66%;  }
-  .column.three {width: 25%;  }
-  .column.four {width: 33.33%;  }
-  .column.five {width: 41.66%;  }
-  .column.six {width: 50%;  }
-  .column.seven {width: 58.33%;  }
-  .column.eight {width: 66.66%;  }
-  .column.nine {width: 75%;  }
-  .column.ten {width: 83.33%;  }
-  .column.eleven {width: 91.66%;  }
-  .column.twelve {width: 100%;  }
-  .column.flow-opposite {float: right;  }
-
-  .bg01{
-  }
-
-  .bg02{
-  }
-
-  .bg03{
-  }
-
-  .bg04{
   }
 
   .bg05{
@@ -2084,7 +2100,7 @@ h3, h6{
   }
       #sidebar section{
         display: block;
-        margin: 1em 0em;
+        margin: 1em 0em 2em 0em;
         padding: 0em 1em;
         color: #555;
         font-size: 0.9em;
@@ -2102,6 +2118,13 @@ h3, h6{
                   #sidebar section h3 a:hover{
                     color: #c06;
                   }
+      #sidebar section ul{
+        list-style-type: square !important;
+        color: #c06;
+      }
+          #sidebar section ul li{
+            color: #c06;
+          }
 
 
   /* Formatação dos itens do Footer */

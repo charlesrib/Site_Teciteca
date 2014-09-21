@@ -228,7 +228,7 @@ function insert_meta_data( $content ) {
     if ( $meta ) {
         $content .= '<div class="row btDownload center">';
         $content .= '<a download href="' . $meta . '" title="Clique para iniciar o download">';
-        $content .= '<div><img src="http://www.cacaleao.com.br/bt_down.png" /></div><div>Faça o download do arquivo</div>';
+        $content .= '<div><img src="http://www.teciteca.ufba.br/bt_down.png" /></div><div>Faça o download do arquivo</div>';
         $content .= '</a>';
         $content .= '</div>';
     }

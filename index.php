@@ -4,11 +4,13 @@
   <head>
        <meta charset="utf-8"/>
        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+       <meta property="og:image" content="http://www.teciteca.ufba.br/padrao.png" />
 
        <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
-       <link rel="shortcut icon" href="icon.png" >
+       <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/icon.png" >
        <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+       <link href="http://www.teciteca.ufba.br/padrao.png" rel="image_src" />
 
        <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); wp_head(); ?>
 
@@ -16,6 +18,7 @@
        <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 
        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53fdfbe70bb5bb74"></script>
+
 
       <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,6 +31,24 @@
 
   <body>
 
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '646608545453782',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 
     <div class="row bg04">
 
@@ -64,7 +85,7 @@
                            <ul id="menu" class="logoBar" role="menubar">
 
                               <!-- Elementos individuais da lista -->
-                              <li role="menuitem"><a href="<?php bloginfo( 'url' ) ?>/">Institucinoal</a></li>
+                              <li role="menuitem"><a href="<?php bloginfo( 'url' ) ?>/">Institucional</a></li>
                               <?php wp_list_pages('title_li='); ?>
                           
                           </ul>
@@ -113,33 +134,6 @@
 
     <div class="row bg02">
 
-    <div class="container">
-
-
-        <!-- Zona do rodapé do site -->
-        <section class="row clearfix tabs" id="tabs" role="article">
-          
-              <!-- zona para colocar o slider -->
-
-              <ul>
-                  <li><a href="#tb1">Tab 01</a></li>
-                  <li><a href="#tb2">Tab 02</a></li>
-                  <li><a href="#tb3">Tab 03</a></li>
-                  <li><a href="#tb4">Tab 04</a></li>
-                  <li><a href="#tb5">Tab 05</a></li>
-              </ul>
-
-              <section>
-                  <div id="tb1">textos ou imagens 01</div>
-                  <div id="tb2">textos ou imagens 02</div>
-                  <div id="tb3">textos ou imagens 03</div>
-                  <div id="tb4">textos ou imagens 04</div>
-                  <div id="tb5">textos ou imagens 05</div>
-              </section>
-
-
-        </section>
-
         <div class="container">
 
               <!-- Zona do corpo de conteúdo do site -->
@@ -160,7 +154,7 @@
                               <h3>Últimas postagens</h3>
                           </div>
 
-                          <?php query_posts('showposts=4'); ?>
+                          <?php query_posts('cat=4&showposts=4'); ?>
                           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                           <div class="column three">
                               <div class="thumbnail">
@@ -197,7 +191,7 @@
                               <h3>Palestras | Oficinas</h3>
                           </div>
 
-                          <?php query_posts('showposts=2'); ?>
+                          <?php query_posts('cat=3&showposts=4'); ?>
                           <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                           <div class="column six">
                               <div class="thumbnail">
@@ -230,9 +224,6 @@
                       <div class="row">&nbsp;</div>
 
               </section>
-
-
-        </div>
 
 
     </div>
